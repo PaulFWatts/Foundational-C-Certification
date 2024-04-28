@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculate and Print Student
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculate Final GPA", "Calculate Final GPA\Calculate Final GPA.csproj", "{794D41D0-EE39-4F0F-9DBE-140E698C0C61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluate Boolean expressions to make decisions in CSharp", "Evaluate Boolean expressions to make decisions in CSharp\Evaluate Boolean expressions to make decisions in CSharp.csproj", "{87FF1244-95E3-4EBE-A2F7-FD837C1CBB3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{794D41D0-EE39-4F0F-9DBE-140E698C0C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794D41D0-EE39-4F0F-9DBE-140E698C0C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794D41D0-EE39-4F0F-9DBE-140E698C0C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FF1244-95E3-4EBE-A2F7-FD837C1CBB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FF1244-95E3-4EBE-A2F7-FD837C1CBB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FF1244-95E3-4EBE-A2F7-FD837C1CBB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FF1244-95E3-4EBE-A2F7-FD837C1CBB3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
