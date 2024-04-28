@@ -1,0 +1,1496 @@
+Received: from SY7P282MB4346.AUSP282.PROD.OUTLOOK.COM (2603:10c6:10:27a::15)
+ by MEYP282MB2568.AUSP282.PROD.OUTLOOK.COM with HTTPS; Sun, 7 Apr 2024
+ 19:41:42 +0000
+Received: from BL0PR0102CA0055.prod.exchangelabs.com (2603:10b6:208:25::32) by
+ SY7P282MB4346.AUSP282.PROD.OUTLOOK.COM (2603:10c6:10:27a::15) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7362.35; Sun, 7 Apr 2024 19:41:39 +0000
+Received: from BL6PEPF0001AB54.namprd02.prod.outlook.com
+ (2603:10b6:208:25:cafe::19) by BL0PR0102CA0055.outlook.office365.com
+ (2603:10b6:208:25::32) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7409.46 via Frontend
+ Transport; Sun, 7 Apr 2024 19:41:37 +0000
+Authentication-Results: spf=pass (sender IP is 13.66.138.137)
+ smtp.mailfrom=nam.pb-dynmktg.com; dkim=pass (signature was verified)
+ header.d=microsoft.com;dmarc=pass action=none
+ header.from=microsoft.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of nam.pb-dynmktg.com
+ designates 13.66.138.137 as permitted sender)
+ receiver=protection.outlook.com; client-ip=13.66.138.137;
+ helo=mail03.nam.pb-dynmktg.com; pr=C
+Received: from mail03.nam.pb-dynmktg.com (13.66.138.137) by
+ BL6PEPF0001AB54.mail.protection.outlook.com (10.167.241.6) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7452.22
+ via Frontend Transport; Sun, 7 Apr 2024 19:41:37 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:17D8A7AC75BA77B7D6C21CC917C71E4B8B08085EA041946B7C404E8F16D7436C;UpperCasedChecksum:87A627D8DF95E8D74F5C2FB1974CFD8A6AE852A957BBDEF56B876B5145DA1FCC;SizeAsReceived:1432;Count:16
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=namkey1; d=microsoft.com;
+ h=From:Date:Subject:Message-Id:Reply-To:To:MIME-Version:Content-Type;
+ bh=4JgeRWckww6/kgkg79wmPEX2taWfjqSxEn5o4iKfFLU=;
+ b=agpFpUDYumjByAzVJtwldQj1hMDjGJkAx9ZZnr+kh4AHxCb996L/lOrEQkh4ibx25eellPltgotY
+   oeMrNrJ3c4INKHkz6g/y7Z2GkpFX/PEkZwXl0b4YX//nyUUlWcd0gBaQKsZ7F3KsApNSyVgNIQny
+   dmbiJ4UXNFcakub/4kLkG4pmcdvgUbVBxwLrg2CfqzI0laOen588f9GhOoHeA6v3QbcZieFu3/Dz
+   Sxtg3nfs+z9USca1SSVrIoa7Uv85euEL6k703BXpeGtfviYbAPoyzFlen0ezmaKsMlMSg1CbSlJQ
+   BOAzx47yC6UresdYkPpKPaUIP1MMsjkx0y2FQQ==
+From: "The .NET Team" <no-reply@microsoft.com>
+Date: Sun, 07 Apr 2024 19:41:35 +0000
+Subject: Week 1 of the C# Certification Learning Series
+Message-Id: <PKB9A9IOQMU4.AX48AL9LL5QX@nam.pb-dynmktg.com>
+Reply-To: "The .NET Team" <no-reply@microsoft.com>
+To: paulfwatts@outlook.com
+X-MS-Dynamics-Message-ID: 2_pusa1_c5c0a-2c5edc7d3dc447deb70cad3033196795
+X-MS-Dynamics-Instance: d6k92oxlqoq7wsceck6hcjxmlaprlta1vjvxt2fs5me2
+X-MS-Dynamics-CodePackageVersion: 2.31.1316.0
+Feedback-ID: aacb9ae7-380e-8bb4-06b3-89694f18d4d6:MicrosoftDynamics
+x-job: aacb9ae7-380e-8bb4-06b3-89694f18d4d6
+RecipientAddressHash: v5x5PZaOduK6IXn2LcKnaO8S0i9DI5hAltuynMzAkc42_9CI51IhUZvh4WG2R2O8aGgtaykmq90N2oULRheeXgqY2
+RecipientAddressHeader: cGF1bGZ3YXR0c0BvdXRsb29rLmNvbQ==
+Content-Type: multipart/alternative; boundary="=-fegdVeEyb7K9/dGa3XgI1Q=="
+X-IncomingHeaderCount: 16
+Return-Path:
+ b-2_pusa1_c5c0a-2c5edc7d3dc447deb70cad3033196795@nam.pb-dynmktg.com
+X-MS-Exchange-Organization-ExpirationStartTime: 07 Apr 2024 19:41:37.4411
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ f88cca47-681f-411b-8028-08dc573abd3d
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BL6PEPF0001AB54:EE_|SY7P282MB4346:EE_|MEYP282MB2568:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BL6PEPF0001AB54.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 4/7/2024 7:20:19 PM
+X-MS-Office365-Filtering-Correlation-Id: f88cca47-681f-411b-8028-08dc573abd3d
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 13.66.138.137
+X-SID-PRA: NO-REPLY@MICROSOFT.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:3;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Apr 2024 19:41:37.2068
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: f88cca47-681f-411b-8028-08dc573abd3d
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ BL6PEPF0001AB54.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SY7P282MB4346
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.1519204
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7409.047
+X-Message-Flag: Flag for follow up
+X-Microsoft-Antispam-Mailbox-Delivery:
+	dwl:1;ucf:0;jmr:0;ex:0;auth:1;dest:I;OFR:TrustedDomainList;ENG:(5062000305)(920221119095)(90000117)(920221120095)(90010023)(91010020)(91040095)(9050020)(9100341)(944500132)(4810010)(4910033)(10005027)(9910022)(9610028)(9510006)(10110021)(9424006)(9310011)(9220031)(120001)(1110175);
+X-Message-Info:
+	qZelhIiYnPnYrsoVl8Xvv++HGCJmo500EnSJmwOr13Aj+MyW8NUSgCBF9NJLKNFsRm/LDyoSb5AoExrHYIoPFGz7mCPEsPdBL3GR281tDSMGLtBvJHzwuWKXNl+M1IKNhX546I8X6JNeW5uaY5vj0Hm218bXp/MpUQokkPkT6z+ud5aEG5k/k1Io01yBY7PukS8Orv19rN+uaarEQxMSow==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?cHRPdkg0cFB4RkswZnZBenltT3FDV2ZUTlRXektPQXJaMWF3OVl2NzlQQkpv?=
+ =?utf-8?B?b3VrZmlHTkdwZStRNXdHK3k3Vi9zZlRON3BITFgrQzdrR3hDcmtiRDkrZFdt?=
+ =?utf-8?B?MXRVMy93VFRUMFlYV1Vkd0MzU3RpRGFBaUtkQTVLY2thNmwxWXRsVEFPbHZV?=
+ =?utf-8?B?MmlDSm5BeVMzTmdaMDQ5ak1aU3FaTmk0OWpOUlZTalZEUXFsVGxOQmFnbUha?=
+ =?utf-8?B?NGtMbEFxdVdQY0pva3ZabXRSUjMyeC8yczd2aE82NDhmMHBzV1IxeWdvMHh3?=
+ =?utf-8?B?cDYycjJQZS96RkxVK3NwckpLeFBlWTYybU55TytRZU1yWFFMejlqcENzUERI?=
+ =?utf-8?B?bGlaQ1lrYXRXVTZNKzRLeHZWRmR0QkllMGRuQmJSb2dmaXpGTUFJR3lHZGQ0?=
+ =?utf-8?B?enRCNGM0ZkhRRVNsejREWGY0QzZYQXlBRlFZLzFLYmN6WEFEMkk5UUN3SUZ6?=
+ =?utf-8?B?TWNJdXBjdENYb2ttOVVMUEtrQ0lPbHpkd0FNOTlzR1d5RDh1RUlXNWlBUmhQ?=
+ =?utf-8?B?M1BxL3hOb1FQQTJFaGZJSjcyWlhhMnhQR1ZZd2lYRVE2SHBaREduaEpBRmJr?=
+ =?utf-8?B?MVVMTm1zeWZ2aW9SUWZneVkzamkwTllpOFVkL0drZzZUMXU4aHJjL0Y3M1Zj?=
+ =?utf-8?B?c3NQYnJNdUdMYkhTbFhlM3dOaE1ZaWF2K2UwWGNJeUhaWWJGZFh4OGtIOUpL?=
+ =?utf-8?B?TWZRSk9VQkJFdm43ejJDMmNNRDRUaVMvc1hwM3pNZHBmVFdEb1NxeXVwSHl1?=
+ =?utf-8?B?aHJxUXFDSXovNFNRREh3bmxnUTlCVFo4NXg4d1JXMXZhMjU1NGdjRVVvblZv?=
+ =?utf-8?B?R1AxWHhNNU1BNmxxQUZQUFJva0xvWFcwZ1Jnc1FBTU40K2dlbkFlejY5MkFp?=
+ =?utf-8?B?ZjZGZWIzZ2NhMmoxalRRSVF0L3Y1QTl6V0ExdTJmNkRkb1ZxL3pFRmw5K05s?=
+ =?utf-8?B?MjlXWVJqc2IzeFVsVzBycGZ3UXE2WE9jRUttMnV6aXRPc0MrRDg1V0hNdzJW?=
+ =?utf-8?B?NGRKZDVJL3YvUFd5b0RCeDlOaXh4aER2dm5sY2JMU3pidEg2TCs4TVVIUVhh?=
+ =?utf-8?B?K2xsZFI1bklYNnNKbkJOUG8rYVRsTUFJU3VadEcrVnU2RVJyYUFHWkFtcER5?=
+ =?utf-8?B?cWZycytjaEEwVy9SaCtnL2IxY3d3UmowRFdzRks3RHc3MlJ5eUZ5NUV6bm9J?=
+ =?utf-8?B?cnY0SFMwdkFCYVY5M0ZFdGJkUUI4N0YzMkdHUzZTazhTYUE5dTNnRzIyZmZB?=
+ =?utf-8?B?V0phUm1OR3VxSW9kY1lTWGhBbXkzMFNwMmtsOHpZQkZlMEpIMm9pK0ppbkNl?=
+ =?utf-8?B?TGZoYSsxc0pYZmdOVHh2WUpnNld4MGxMY3pMUVorQTlEOEhWM2FRVHNmT091?=
+ =?utf-8?B?T2grTVl4cWJUVTloTmdQQ0l6Umx4MTloRmZrbGRlQmk4Q2NHMjNDWlNMalZZ?=
+ =?utf-8?B?N3psLzArMjZjbXVUWVlIdWorV1Fpdkxkd0NFMVArRHJkWkVQTUZCY0hqcW9P?=
+ =?utf-8?B?R2NOdU55VFlFQXFPbFQ5dG4zWlpDYVhJSVlXS2F6b0ZVYVRDcHkyRnhFZ2xq?=
+ =?utf-8?B?OVdVUy9SaTRTOHBOaGJ6VUdibGxFaWgwb2hWZEtIT1JJUUNUTUdjNGZGM1pT?=
+ =?utf-8?B?Y2p5RmNTRWllOGNmVHZZKzZKSnYyYnRtRjdRQVYySG96c3QrdFIzdndVMy91?=
+ =?utf-8?B?eFI3enE3a0ZlMkxDZ1cyUUdaR09VaVJvWkVQZW5iMDJxeGFJT0FDaFFoTERq?=
+ =?utf-8?B?a0lJb2gxdXJ2Qy9SK3ZQQUVpUkUwZy9KWVBkamFiWXJOdHpzYXhFT3h5UzA2?=
+ =?utf-8?B?V2dBMnZTYlJrQkd2MDFMWE5kYTJVblhidmV4SUhmSHFabGc4dDc5TUUzbG5S?=
+ =?utf-8?B?MTFsQldKSFpiaFJRMWowdXg1N252bUU3eDlsTWFIMTBFN29aMW5wckJLdkV1?=
+ =?utf-8?B?NzhGeVlaMU1YZjRxSDNXNEh1QngzTTYzVGdaaW0xUTlXU0VlMnViVFN2RmFx?=
+ =?utf-8?B?UE9vczhDMXJjdExrNDI3OGw1NGRxMGdHTHFWclVocVAyS2xBcHBMZG1JdGVy?=
+ =?utf-8?B?eEs0bVd5ODZOZHRxYmp4SzVPYlJRU2RBNk90YWdBN3IxNExqOW9KRm4ybEwr?=
+ =?utf-8?B?ZE1OQ0tVV2pySUNEMUlWUVlvMm1KY0pBS2FmdDd0Q3plQkxsTkhtOGZNemVT?=
+ =?utf-8?B?SFhmQTRtWFpoeGN0M1NWMHJzQUFGYjBWUFZkdG5DUjFmL21jWXZMMTlyczVX?=
+ =?utf-8?B?S1RTZVE2ZjE3UGwzN2NodmhRRHFNVTdDYTdSdjgvT05rU0FQWmwyOUhFSFhU?=
+ =?utf-8?B?aitJNkVZd1o4T3I2YTdSWENsQXZVMnJKcW1yNmFwS1JnYTFIc2djdWhwdlBw?=
+ =?utf-8?B?ZmRIRXdNU2pIdVhyNHBwdm9nUEFGWGM3NTFOdTlMUFJWQ1BJajZQZkQ0T3c0?=
+ =?utf-8?B?NzJxT1hHNHpwMXhpM09NUG9IWXVUNEhIOVdkSE4vaXVzcnZkbCs3WFdLQ3JX?=
+ =?utf-8?B?KzFxVnFRMEtGa1FNL3dFNTFDYXpEcG1BRHZScnJ0aEJlbnBHRExxOTNpWkox?=
+ =?utf-8?B?dFk0UDArZExydDBpM0xMV2hnL25oYU5uTm14UGJEN0FVNmNMWWkrV0lyTWVW?=
+ =?utf-8?B?cWdSbVk3WDAvaUlJOWpYSHF5Qmh1SUVqbitDSWIxeWp0SEhLWm95Vmczb29h?=
+ =?utf-8?B?d0VmZDl6MTdJVjVmcktYaU5NbTV1b2xheXB2RzVZbFlicy9hRzRHVEdSd3pV?=
+ =?utf-8?B?aG5ndTh2QXh0RGU0UG1xd2E5WGgvaTltNmExZDFLeFR6UkVacTBWN0dNV1Ur?=
+ =?utf-8?B?VXlLZ2pNa2lEdkVydTgwS2JBZ0VCQW1UTnpsRFpMZnNMM1RBUFhqWjIyVHZJ?=
+ =?utf-8?B?Um9oRWNWMW9Vakg1dVFFUkF2amtsdVZnQ3BsZlJMNzBQL2c0eUtZMmxzR0VQ?=
+ =?utf-8?B?RHFRRGhjdEtNVHRQODV3UWdGbjhPbUwwWTlZeXF6dEdhblZGekpUWDVQNFNx?=
+ =?utf-8?B?VVFoMDJtT0NET1IxM1pBZS93alh4N2tud3hUR0MxVFUva0JWOEJoRHN1WG1M?=
+ =?utf-8?B?V2JwL212WTZVeWJSYzdMTmZOTFlNdWh3UWtuMnYzckZUU0FCdk5YZHllTlJn?=
+ =?utf-8?B?azEvZkVFTUZQNG9GOC95emx4MEltUmNJUXhrRCtWTVMvbUIrWEl0bG9LQS93?=
+ =?utf-8?B?Y2VOMUtTMUpJbzZOODRlVWhvNVMxTTBNZWllSjF1cFV0Z01WeDhScWRXZ2VP?=
+ =?utf-8?B?QkJIUG1JZUREbUFyOHd4UmJWWkprU2RRd3ZXam8yU2sxSVp5VjlqQUpNNTFp?=
+ =?utf-8?B?MnBOMS9lbTN5cDd4OTVCTUxGVmg2ejNvazNHK25oNGRRUWcveTVVUHJvMTJI?=
+ =?utf-8?B?RmdRemZqWW4zNlpJelVReUZzOFlnYVUyWnF4d2w4alQ2SFhpTEJzMnU5UThp?=
+ =?utf-8?Q?84PIET/ktJqiDcz+jFQ=3D?=
+MIME-Version: 1.0
+
+--=-fegdVeEyb7K9/dGa3XgI1Q==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Welcome to week one of the C# Certification Learning Series=F0=9F=91=8B
+This week, [write your first code using C# <https://learn.microsoft.com/tra=
+ining/paths/get-started-c-sharp-part-1/>] .
+[
+Go to learning path
+<https://learn.microsoft.com/training/paths/get-started-c-sharp-part-1/>] L=
+earning Path Contents The "Write your first code using C#" learning path co=
+ntains four tutorial modules and two hands-on projects.
+Tutorial modules Write your first C# code Store and retrieve data using lit=
+eral and variable values in C# Perform basic string formatting in C# Perfor=
+m basic operations on numbers in C#
+Hands-on projects Guided project - Calculate and print student grades Guide=
+d project - Calculate final GPA
+Video walkthrough Watch this video where C# experts guide you through the c=
+ontent in this learning path. [<undefined>] [<https://www.youtube.com/watch=
+?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D95=
+2s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DP=
+Ldo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<http=
+s://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpU=
+vU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch=
+?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D95=
+2s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DP=
+Ldo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<http=
+s://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpU=
+vU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch=
+?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D95=
+2s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DP=
+Ldo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<http=
+s://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpU=
+vU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch=
+?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D95=
+2s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DP=
+Ldo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<http=
+s://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpU=
+vU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch=
+?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D95=
+2s&pp=3DgAQBiAQB>] [<https://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DP=
+Ldo4fOcmZ0oW_XwucVVU__tpUvU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>] [<http=
+s://www.youtube.com/watch?v=3DKRb7T1LZZj0&list=3DPLdo4fOcmZ0oW_XwucVVU__tpU=
+vU75DiVh&index=3D1&t=3D952s&pp=3DgAQBiAQB>]
+Additional Resources
+[<https://youtu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<https:/=
+/youtu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<https://youtu.be=
+/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3A=
+oHM>] [<https://youtu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<h=
+ttps://youtu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<https://yo=
+utu.be/nus5SP3AoHM>] [<https://youtu.be/nus5SP3AoHM>] [<https://youtu.be/nu=
+s5SP3AoHM>]
+[<https://youtu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>] [<https:/=
+/youtu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>] [<https://youtu.be=
+/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxr=
+y8A>] [<https://youtu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>] [<h=
+ttps://youtu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>] [<https://yo=
+utu.be/ZXCMBOxry8A>] [<https://youtu.be/ZXCMBOxry8A>]
+=F0=9F=8F=86Don=E2=80=99t forget to verify your trophy for this learning pa=
+th!
+[Go to freeCodeCamp <https://www.freecodecamp.org/learn/foundational-c-shar=
+p-with-microsoft/write-your-first-code-using-c-sharp/trophy-write-your-firs=
+t-code-using-c-sharp>] to verify that you completed the training content. H=
+ere, you'll find instructions to accomplish this verification. Have any que=
+stions? Head to the freeCodeCamp C# forum: [https://aka.ms/certification-he=
+lp <https://aka.ms/certification-help>]
+Next Week This week you learned to write your first code using C#. Next wee=
+k, you'll learn how to create and run simple C# console applications. You'l=
+l also learn how to use a professional developer tool, Visual Studio Code! =
+Looking for more? Sign up to be notified of future .NET Learning Series:
+[https://aka.ms/learningseries/future/signup <https://aka.ms/learningseries=
+/future/signup>] Happy Coding=F0=9F=8E=89
+=C2=A9 2024 Microsoft Dynamics. All rights reserved.
+Microsoft Redmond
+[
+Unsubscribe
+<https://devdivdynamicsprod.microsoftcrmportals.com/manageSubscriptions?msd=
+ynunsubscribeid=3DOTt9IFLcILA4pL98qLHwaTeUuHkZQ89gxxEbpMbUw1Ax>]=
+
+--=-fegdVeEyb7K9/dGa3XgI1Q==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><m=
+eta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1">
+<title>Week 1 of the C# Certification Learning Series</title>
+<meta name=3D"referrer" content=3D"never">
+<meta name=3D"format-detection" content=3D"telephone=3Dno,date=3Dno,address=
+=3Dno,email=3Dno">
+<meta name=3D"x-apple-disable-message-reformatting">
+<style>p{margin:0;padding:0;line-height:125%;line-height:1.25;mso-line-heig=
+ht-rule:at-least}[dir=3Drtl],[dir=3Drtl] [align=3Dright] *{text-align:right=
+}[dir=3Drtl] [align=3Dleft] *{text-align:left}s span{text-decoration:line-t=
+hrough}u span{text-decoration:underline}.dividerWrapper p span{line-height:=
+0}ol,ul{margin-top:15px;margin-bottom:15px;line-height:125%;line-height:1.2=
+5;mso-line-height-rule:at-least;padding-inline-end:0;padding-inline-start:4=
+0px}p img{max-width:100%}a{text-decoration:none}u a{text-decoration:underli=
+ne}h1{font-size:28px}h2{font-size:22px}h3{font-size:18px}h1,h2,h3,h4{margin=
+:0;line-height:125%;line-height:1.25}.imageWrapper a img{text-decoration:no=
+ne;border:0}th.columnContainer,th.inner{font-weight:400;text-align:left}.hi=
+de-on-desktop-class{display:none}[dir=3Drtl] th.columnContainer,[dir=3Drtl]=
+ th.inner{font-weight:400;text-align:right}img{max-width:100%!important}@me=
+dia only screen and (max-width:768px){.tbContainer{display:block!important}=
+a span{line-height:inherit!important}.multi table{table-layout:fixed;height=
+:auto!important}.multi td{width:auto!important;min-height:0!important}.mult=
+i tbody,.multi tbody tr,.multi tbody tr td,.multi tbody tr th,.outer tbody,=
+.outer tbody tr,.outer tbody tr td,.outer tbody tr th{display:block!importa=
+nt;box-sizing:border-box;height:auto!important;min-height:0!important}.wrap=
+-section .multi tbody,.wrap-section .multi tbody tr,.wrap-section .multi tb=
+ody tr td,.wrap-section .multi tbody tr th,.wrap-section .outer tbody,.wrap=
+-section .outer tbody tr,.wrap-section .outer tbody tr td,.wrap-section .ou=
+ter tbody tr th{width:100%!important}.wrap-section .outer{display:table}.wr=
+ap-section .multi tbody,.wrap-section .outer tbody{display:table-row-group}=
+.wrap-section .multi tbody tr,.wrap-section .outer tbody tr{display:table-r=
+ow}.wrap-section .multi tbody tr td,.wrap-section .multi tbody tr th,.wrap-=
+section .outer tbody tr td,.wrap-section .outer tbody tr th{display:table-c=
+ell}.wrap-section .multi tbody tr td .columnContainer,.wrap-section .multi =
+tbody tr th .columnContainer,.wrap-section .outer tbody tr td .columnContai=
+ner,.wrap-section .outer tbody tr th .columnContainer{display:inline}.wrap-=
+section .multi tbody tr td .inner,.wrap-section .multi tbody tr th .inner,.=
+wrap-section .outer tbody tr td .inner,.wrap-section .outer tbody tr th .in=
+ner{display:table-cell}.multi .inner{height:auto!important;min-height:0!imp=
+ortant}.tbContainer .inner{box-sizing:border-box}.outer{width:100%!importan=
+t}.tbContainer .columnContainer table{table-layout:fixed!important}.tbConta=
+iner .columnContainer>table{height:auto!important}.innerTable{min-height:0!=
+important}.no-wrap-section .outer{display:table!important;border-collapse:s=
+eparate!important}.no-wrap-section .multi table{height:100%!important}.no-w=
+rap-section .multi tbody,.no-wrap-section .outer tbody{display:table-row-gr=
+oup!important;width:100%!important}.no-wrap-section .multi tbody tr,.no-wra=
+p-section .outer tbody tr{display:table-row!important;width:100%!important}=
+.no-wrap-section .multi tbody tr td,.no-wrap-section .multi tbody tr th,.no=
+-wrap-section .outer tbody tr td,.no-wrap-section .outer tbody tr th{displa=
+y:table-cell!important}.no-wrap-section.columns-equal-class .outer tbody tr=
+ td,.no-wrap-section.columns-equal-class .outer tbody tr th{height:0!import=
+ant}.no-wrap-section .outer tbody tr td.inner,.no-wrap-section .outer tbody=
+ tr th.inner{width:100%!important;height:auto!important}a[x-apple-data-dete=
+ctors]{color:inherit!important;text-decoration:none!important;font-size:inh=
+erit!important;font-family:inherit!important;font-weight:inherit!important;=
+line-height:inherit!important}.hide-on-mobile-class{display:none!important}=
+.hide-on-desktop-class{display:block!important}.hide-on-desktop-class.hide-=
+on-mobile-class{display:none!important}}body,div{font-family:Arial,Verdana,=
+sans-serif;font-size:14px;color:#000;background-color:#fff}div div{backgrou=
+nd-color:transparent}[data-layout=3Dtrue]{margin:0 auto;max-width:600px}</s=
+tyle><!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPe=
+rInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+<body dir=3D"ltr" style=3D"font-family:Arial,Verdana,sans-serif;font-size:1=
+4px;color:#000;background-color:#fff;background:#fff"><!--[if !mso]><!--><d=
+iv id=3D"preheader" style=3D"display: none; max-height: 0px; overflow: hidd=
+en;">Welcome to week one of the C# Certification Learning Series=F0=9F=91=
+=8B&nbsp;This week, write your first code using C#.
+Go to learning path
+Learning Path ContentsThe &quot;Write your first code using C#&quot; learni=
+ng path contains four tutorial modules and two hands-on projects.
+Tutorial modulesWrite your first C# co<br>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp=
+;=E2=80=8C&nbsp;=E2=80=8C&nbsp;<br>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;</div><!----><!--[endif]----><!--[if gte mso 9]>=
+ <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" s=
+tyle=3D"border-collapse: collapse;"><tr><th style=3D"margin-bottom:0; margi=
+n-top:0; padding:0; background-color: rgb(255, 255, 255); border-width: ; b=
+order-style: ; border-color: ; border-collapse: collapse;"> <![endif]--><di=
+v style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:#fff;max-width:600px;margin:auto"><!--[if gte mso 9]> </div=
+><div style=3D"background-color: transparent; border:none;"> <![endif]-->
+<div class=3D"columns-equal-class wrap-section" style=3D"font-family:Arial,=
+Verdana,sans-serif;font-size:14px;color:#000;background-color:transparent">=
+<!--[if gte mso 9]> </div><div style=3D"background-color: transparent; bord=
+er:none;"> <![endif]-->
+<table class=3D"outer" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse:collapse;display:block" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;min-=
+width:20px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner ui-sortable" style=3D"text-align:left;min-width:20px;pad=
+ding:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;fon=
+t-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px"><h2 style=3D"font-size:22px;mar=
+gin:0;line-height:1.25">Welcome to week one of the C# Certification Learnin=
+g Series=F0=9F=91=8B&nbsp;</h2><p style=3D"margin:0;padding:0;line-height:1=
+.25;mso-line-height-rule:at-least"><br></p><p style=3D"margin:0;padding:0;l=
+ine-height:1.25;mso-line-height-rule:at-least">This week, <span><span><span=
+><span><span><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=
+=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%=
+2FC5EzPFsPnKoyYwSfS0AfWp5ec4jkXgWykV1prK4yFEQx%2F7GlCRUix9lmnliZ0R6m85vZSoK=
+plRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d=
+%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025832001%7CUnknown%=
+7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6M=
+n0%3D%7C0%7C%7C%7C&amp;sdata=3DkFxHuxYCCivPKt0wRAeVzPSlePh17PfiRibK6lU24pA%=
+3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d4684594405=
+5.svc.dynamics.com/t/t/C5EzPFsPnKoyYwSfS0AfWp5ec4jkXgWykV1prK4yFEQx/7GlCRUi=
+x9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"aFPnsUuR2bWioCh8BEyi7znkwFz=
+8R6mwWUhryamoY4h01xcRwyroR7VD+IR4jQ0XFdZq5o22Y8qH8IZVCgdVANPAZER+7+j8hcDr7c=
+NhTPplY0ZOlenD/v5pPvfzgvnHHr8Vc6mOyi1ei/DCsrnyibV2FrBvgHgabZhlXevpDIk=3D" d=
+ata-msdyn-tracking-id=3D"1b5962cde58011708038945747" style=3D"text-decorati=
+on:none">write your first code using C#</a></span></span></span></span></sp=
+an>.&nbsp;</p></div><!--[if gte mso 9]> <table align=3D"center"  style=3D"b=
+order-collapse: collapse;border-spacing: 0px;padding: 0px; margin: 0px;" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" >
+<tr><style> .buttonWrapper a {border-style: none !important;} .buttonWrappe=
+r {padding: 0px !important; margin: 0px !important;} .buttonClass {mso-hide=
+: none !important;}</style>
+<td valign=3D"top" align=3D"center" width=3D"560"> <![endif]--><div align=
+=3D"center" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;co=
+lor:#000;background-color:transparent;margin:10px 0" class=3D"buttonWrapper=
+"><!--[if gte mso 9]> <table  cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"border-collapse: collapse;border-spacing: 0px;font-size: 0; li=
+ne-height: 0;">
+<tr style=3D"padding: 0px;mso-line-height-rule: exactly;line-height: 1px;" =
+height=3D"10"><td>&nbsp;</td></tr><tr>
+<td>
+<table  border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"" style=
+=3D" color: rgb(255, 255, 255); border-collapse: collapse;border-spacing: 0=
+px;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"center"  style=3D"height: 17px; vertical-ali=
+gn: middle; align-content: center; text-align: center; color: rgb(255, 255,=
+ 255); font-family: Arial, Verdana, sans-serif"><v:roundrect style=3D"heigh=
+t:37px;v-text-anchor:middle; width:160px;" arcsize=3D"11%" stroke=3D"false"=
+ fillcolor=3D"rgb(7, 66, 171)" >
+<w:anchorlock/></v:roundrect>
+<v:shapetype id=3D"mytype"
+coordorigin=3D"0 0" coordsize=3D"200 200">
+<v:path v=3D"m 0,0 l 0,200, 200,200, 200,0 x e"></v:path>
+</v:shapetype>
+<v:shape xmlns:v=3D"urn:schemas-microsoft-com:vml" type=3D"#mytype" href=3D=
+"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318=
+f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FxUcTLN1JPcdiRRTe7I4HV=
+I9q7YBykdsLIbfhMUEEOm0x%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;=
+data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435=
+aaaaaaaaaaaa%7C1%7C0%7C638481157025843021%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiM=
+C4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;=
+sdata=3D3J3aqizg58nKWdRXc3Dd%2FQePpsUzTEXTlKXoDR9KQU8%3D&amp;reserved=3D0" =
+originalSrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/=
+t/xUcTLN1JPcdiRRTe7I4HVI9q7YBykdsLIbfhMUEEOm0x/7GlCRUix9lmnliZ0R6m85vZSoKpl=
+RUQixFgJAoWGDUAx" shash=3D"EwrE0jbcdh+AqXfGcWwVOM5Cy8IKitDtMMnJmeeZjTLNqiUb=
+4Oec92g0p1gA4a1pc18wzjB/sKU8wImfA6z/oxlfwENqP8nB2TlPSYidtR4hjm7uf6TYvpvJCde=
+hk3UpJUAE08bzFrU/1+VQu5csiO2bCoWxc3I1vQvAt9LDXAI=3D"  data-msdyn-tracking-i=
+d=3D"42bfd265b10641708040595524" fill=3D"false" stroke=3D"false" style=3D"p=
+osition: absolute; top: 0px; left: 0px;padding: 0px;height:37px;width:160px=
+;v-text-anchor:middle;">
+<v:textbox inset=3D"0,0,0,0"><center style=3D"font-family: Arial, Verdana, =
+sans-serif;font-size: 14px; color: rgb(255, 255, 255);">
+Go to learning path
+</center></v:textbox></v:shape></td></tr></tbody></table></td>
+</tr><tr style=3D"padding: 0px;" height=3D"10"/></table> <![endif]--> <!--[=
+if !mso]> <!----><a class=3D"buttonClass" href=3D"https://aus01.safelinks.p=
+rotection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055=
+.svc.dynamics.com%2Ft%2Ft%2FxUcTLN1JPcdiRRTe7I4HVI9q7YBykdsLIbfhMUEEOm0x%2F=
+7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca=
+47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638=
+481157025851087%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzI=
+iLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DBwZyYmoyopEX9WfvSb=
+0sG2ZvUgt7ftJQb2KYIHlxof8%3D&amp;reserved=3D0" originalsrc=3D"https://5a331=
+8f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/xUcTLN1JPcdiRRTe7I4HVI9q7Y=
+BykdsLIbfhMUEEOm0x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"Y=
+cfMTg3y/a4BnWDYm/ril7GZW4zelx4FpYFsaCL5bvhAhJA8xQ7coRZAUBR8Jx8Ku1duZX0GceHD=
+1zGO2AfEJ8RWQgjmi78JjR0aRZCf6kwhf61u8Zc2IevzChEa/WDer+1QnnPf/dQy+gGUpczkA2J=
+iLyOuFRAjTewKVwuJZfI=3D" style=3D"text-align:center;margin-right:auto;margi=
+n-left:auto;display:inline-block;text-decoration:none;background-color:#074=
+2ab;border-radius:4px;color:#fff;width:fit-content;height:auto;padding:10px=
+ 20px;max-width:100%;line-height:normal;border-color:#fff;border-width:0;fo=
+nt-size:14px;mso-hide:none!important" data-msdyn-tracking-id=3D"42bfd265b10=
+641708040595524">
+<span style=3D"font-family:Arial,Verdana,sans-serif;display:inline-block;mi=
+n-width:1px">Go to learning path</span>
+</a><!--[endif]----></div><!--[if gte mso 9]> </td></tr></table> <![endif]-=
+-><div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#=
+000;background-color:transparent;margin:10px"><h3 style=3D"font-size:18px;m=
+argin:0;line-height:1.25"><br></h3><h3 style=3D"font-size:18px;margin:0;lin=
+e-height:1.25">Learning Path Contents</h3><p style=3D"margin:0;padding:0;li=
+ne-height:1.25;mso-line-height-rule:at-least">The &quot;Write your first co=
+de using C#&quot; learning path contains four tutorial modules and two hand=
+s-on projects.</p></div></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table>
+</div><div class=3D"emptyContainer columns-equal-class wrap-section" style=
+=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;backgrou=
+nd-color:transparent"><!--[if gte mso 9]> </div><div style=3D"background-co=
+lor: transparent; border:none;"> <![endif]--><table class=3D"outer" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:block" rol=
+e=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer multi" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion">
+<tbody>
+<tr>
+<!--[if gte mso 9]> <th data-container=3D"true" class=3D"columnContainer co=
+lumnContainerWrapper" data-container-width=3D"50" style=3D"font-weight: nor=
+mal; text-align: left; vertical-align: top; min-width: 5px; width: 290px; p=
+adding: 7px 10px 7px 7px; height: 226.5px; min-height: 226.5px; padding-lef=
+t: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" role=3D=
+"presentation"> <![endif]--><!--[if !mso]> <!----><th class=3D"columnContai=
+ner columnContainerWrapper" style=3D"font-weight:400;text-align:left;vertic=
+al-align:top;min-width:5px;width:273px;padding:7px 10px 7px 7px;height:226.=
+5px;min-height:226.5px" role=3D"presentation"><!--<![endif]--><!--[if gte m=
+so 9]> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D=
+"padding: 0px;mso-line-height-rule: exactly;line-height: 1px;height: 7px" h=
+eight=3D"7"><td></td></tr></table> <![endif]-->
+<!--[if gte mso 9]> <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"height: 100%; min-height: 226.5px; border-collapse: collapse;" =
+role=3D"presentation" class=3D"innerTable"> <![endif]--><!--[if !mso]> <!--=
+--><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"heigh=
+t:100%;min-height:226.5px" role=3D"presentation" class=3D"innerTable"><!--<=
+![endif]-->
+<tbody>
+<tr>
+<!--[if gte mso 9]> <th style=3D"padding: 0px;width:7px;border-bottom: 2px =
+solid transparent;" width=3D"7"></th> <![endif]--><th class=3D"columnContai=
+ner inner" style=3D"text-align:left;min-width:5px;padding:10px;vertical-ali=
+gn:top;word-wrap:break-word;word-break:break-word;border-color:#3786ca;bord=
+er-width:2px;border-style:solid;border-radius:15px;font-weight:400;height:2=
+02.5px;min-height:202.5px" role=3D"presentation">
+<!--[if gte mso 9]> <table  width=3D"249" style=3D"table-layout: fixed;bord=
+er-collapse: collapse; width: 249px; padding-top: 10px;padding-bottom: 10px=
+; padding-left: 10px;padding-right: 10px; " cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top"> <![endif]--><div style=3D"font-family:Arial,Verdana,san=
+s-serif;font-size:14px;color:#000;background-color:transparent;padding:10px=
+"><h3 style=3D"font-size:18px;margin:0;line-height:1.25;text-align:center">=
+<strong>Tutorial modules</strong></h3><ol style=3D"margin-top:15px;margin-b=
+ottom:15px;line-height:1.25;mso-line-height-rule:at-least;padding-inline-en=
+d:0;padding-inline-start:40px"><li>Write your first C# code</li><li>Store a=
+nd retrieve data using literal and variable values in C#</li><li>Perform ba=
+sic string formatting in C#</li><li>Perform basic operations on numbers in =
+C#</li></ol></div><!--[if gte mso 9]> </td></tr></table> <![endif]--></th>
+<!--[if gte mso 9]> <th style=3D"padding: 0px;width:10px;border-bottom: 2px=
+ solid transparent;" width=3D"10"></th> <![endif]--></tr>
+</tbody>
+</table>
+<!--[if gte mso 9]> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr style=3D"padding: 0px;mso-line-height-rule: exactly;line-height: 1px;h=
+eight: 7px" height=3D"7"><td></td></tr></table> <![endif]--></th>
+<!--[if gte mso 9]> <th data-container=3D"true" class=3D"columnContainer co=
+lumnContainerWrapper" data-container-width=3D"50" style=3D"font-weight: nor=
+mal; text-align: left; vertical-align: top; min-width: 5px; width: 290px; p=
+adding: 7px 7px 7px 10px; height: 226.5px; min-height: 226.5px; padding-lef=
+t: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 0px;" role=3D=
+"presentation"> <![endif]--><!--[if !mso]> <!----><th class=3D"columnContai=
+ner columnContainerWrapper" style=3D"font-weight:400;text-align:left;vertic=
+al-align:top;min-width:5px;width:273px;padding:7px 7px 7px 10px;height:226.=
+5px;min-height:226.5px" role=3D"presentation"><!--<![endif]--><!--[if gte m=
+so 9]> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D=
+"padding: 0px;mso-line-height-rule: exactly;line-height: 1px;height: 7px" h=
+eight=3D"7"><td></td></tr></table> <![endif]-->
+<!--[if gte mso 9]> <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"height: 100%; min-height: 226.5px; border-collapse: collapse;" =
+role=3D"presentation" class=3D"innerTable"> <![endif]--><!--[if !mso]> <!--=
+--><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"heigh=
+t:100%;min-height:226.5px" role=3D"presentation" class=3D"innerTable"><!--<=
+![endif]-->
+<tbody>
+<tr>
+<!--[if gte mso 9]> <th style=3D"padding: 0px;width:10px;border-bottom: 2px=
+ solid transparent;" width=3D"10"></th> <![endif]--><th class=3D"columnCont=
+ainer inner" style=3D"text-align:left;min-width:5px;padding:10px;vertical-a=
+lign:top;word-wrap:break-word;word-break:break-word;border-radius:15px;bord=
+er-color:#3786ca;border-width:2px;border-style:solid;background-color:#fff;=
+font-weight:400;height:202.5px;min-height:202.5px" role=3D"presentation">
+<!--[if gte mso 9]> <table  width=3D"249" style=3D"table-layout: fixed;bord=
+er-collapse: collapse; width: 249px; padding-top: 10px;padding-bottom: 10px=
+; padding-left: 10px;padding-right: 10px; " cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top"> <![endif]--><div style=3D"font-family:Arial,Verdana,san=
+s-serif;font-size:14px;color:#000;background-color:transparent;padding:10px=
+"><h3 style=3D"font-size:18px;margin:0;line-height:1.25;text-align:center">=
+<strong>Hands-on projects</strong></h3><ol style=3D"margin-top:15px;margin-=
+bottom:15px;line-height:1.25;mso-line-height-rule:at-least;padding-inline-e=
+nd:0;padding-inline-start:40px"><li>Guided project - Calculate and print st=
+udent grades</li><li>Guided project - Calculate final GPA</li></ol></div><!=
+--[if gte mso 9]> </td></tr></table> <![endif]--></th>
+<!--[if gte mso 9]> <th style=3D"padding: 0px;width:7px;border-bottom: 2px =
+solid transparent;" width=3D"7"></th> <![endif]--></tr>
+</tbody>
+</table>
+<!--[if gte mso 9]> <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr style=3D"padding: 0px;mso-line-height-rule: exactly;line-height: 1px;h=
+eight: 7px" height=3D"7"><td></td></tr></table> <![endif]--></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table></div><div class=3D"emptyContainer columns-equal-class wrap-section=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><!--[if gte mso 9]> </div><div style=3D"backgr=
+ound-color: transparent; border:none;"> <![endif]--><table class=3D"outer" =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:block=
+" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;vert=
+ical-align:top;min-width:5px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner" style=3D"text-align:left;min-width:5px;padding:10px;ver=
+tical-align:top;word-wrap:break-word;word-break:break-word;font-weight:400"=
+ role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px"><h3 style=3D"font-size:18px;mar=
+gin:0;line-height:1.25">Video walkthrough</h3><p style=3D"margin:0;padding:=
+0;line-height:1.25;mso-line-height-rule:at-least">Watch this video where C#=
+ experts guide you through the content in this learning path.</p></div><div=
+ style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;ba=
+ckground-color:transparent;margin:10px;padding:0"><!--[if gte mso 9]> <tabl=
+e  width=3D"560" style=3D"table-layout: fixed;border-collapse: collapse; wi=
+dth: 560px; padding-top: 0px;padding-bottom: 0px; padding-left: 0px;padding=
+-right: 0px; " cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top"> <![endif]--><div class=3D"videoWrapper" align=3D"center=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><a style=3D"text-decoration:none"></a><a href=
+=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3=
+318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FBTUyT0LO7Oj4siS8qE=
+xVCBV2TBHdb6PxwIsoFzp9rvox%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&a=
+mp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb=
+435aaaaaaaaaaaa%7C1%7C0%7C638481157025858262%7CUnknown%7CTWFpbGZsb3d8eyJWIj=
+oiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&a=
+mp;sdata=3D%2FYEuSoPpkKJdaTCPW%2B5aD%2FpUKTJR4M2vpirJMOzwPHM%3D&amp;reserve=
+d=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics=
+.com/t/t/BTUyT0LO7Oj4siS8qExVCBV2TBHdb6PxwIsoFzp9rvox/7GlCRUix9lmnliZ0R6m85=
+vZSoKplRUQixFgJAoWGDUAx" shash=3D"w6Z+drbyRViayincjgt4MCErn3RIOy/thvSL22wBK=
+Nzgt0Z3af3eIoIW+Q3nLE95aUuLGWhQ004w8qaCviI0661TgPVwvozBdpuGaxEh6Te5NeJVfnrk=
+Ona5of2DftqRC4v8cn+DIYL+wD/6SUKSOzvB5JwX9x8NGn4T8DU2lyg=3D" style=3D"text-d=
+ecoration:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.c=
+om/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2=
+Ft%2Ft%2FxxqlR4spwxJgKdocaorZLx1EKYDwmwBm5UEEiaUcSPkx%2F7GlCRUix9lmnliZ0R6m=
+85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc5=
+73abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025864935%7CU=
+nknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLC=
+JXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DAayW9ahIok%2BPF9R3L0lLuD77IybNT%2BZGW=
+qRN8cqlv7g%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99=
+d46845944055.svc.dynamics.com/t/t/xxqlR4spwxJgKdocaorZLx1EKYDwmwBm5UEEiaUcS=
+Pkx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"bbBZHY0TkXcqxBCM=
+E5aVgSrWPHmgOs47mH7KCRMuGC7zLgMQHRWU1PMfg+Hrb0DkSdQgjVaymE1nnt/FhB3yWlEc/6q=
+9E4FqXBGZuwu4l+DPjnWHJDgyvthkkPM35M/Ar8b4/+L9Em8CH7qqBa60jUhs+qtTmPaKKj42JY=
+tsgxI=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.safel=
+inks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845=
+944055.svc.dynamics.com%2Ft%2Ft%2F3syi6eft032ZR5pWvC3aIRxR36KZlRkFIKjvQDDms=
+mUx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7C=
+f88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0=
+%7C638481157025871734%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV=
+2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DFGq7DFcv3ENp=
+hpH4X60ybqVmEqhjjZkknuiS7uzmEZI%3D&amp;reserved=3D0" originalsrc=3D"https:/=
+/5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/3syi6eft032ZR5pWvC3a=
+IRxR36KZlRkFIKjvQDDmsmUx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shas=
+h=3D"lxgqDaMxux4kLh1J4yzvC+l/tpPke36cGIPG5zz00de7sgQnKaaKhGISyd6SJAycS8vGE5=
+hN64Xj/hvvqEtmUkap6WVbi00s1xBDgmGyOWDm9rsZUqMi1a04Z4HufI8+NntoKjlPW47sPNU+w=
+dT1Hmbnv+D2ChvHn1TYGki93EE=3D" style=3D"text-decoration:none"></a><a href=
+=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3=
+318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FfZNttCHryGzTIA47HP=
+xKPVOxSn9hkvCMEKZPAjpQLgMx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&a=
+mp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb=
+435aaaaaaaaaaaa%7C1%7C0%7C638481157025878033%7CUnknown%7CTWFpbGZsb3d8eyJWIj=
+oiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&a=
+mp;sdata=3Dg0pWtz9ZXMBie3kUuRrgKMmvnXVs9E58wp8o%2F5hIl6g%3D&amp;reserved=3D=
+0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com=
+/t/t/fZNttCHryGzTIA47HPxKPVOxSn9hkvCMEKZPAjpQLgMx/7GlCRUix9lmnliZ0R6m85vZSo=
+KplRUQixFgJAoWGDUAx" shash=3D"YrkOvapOjlXTY5/6FxnIoo6AM6yZvBkL8RAkB1R20QQQG=
+GLJ09w7ICySP/KBebx+63DdAaS9kqCwNtYWpgkAfgXF6yJOQHSQy+3Qrr3rujU/rIiw644hgPOw=
+xZPwPsfiEcxGWHWaojWazWij9TPvAauyT3WBmcacOwdAt1W+Tx4=3D" style=3D"text-decor=
+ation:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.com/?=
+url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2=
+Ft%2FnDOOwEgQojpyc2VlYoRQqB0wxoTW2DXtdRkeZ8Gn7s8x%2F7GlCRUix9lmnliZ0R6m85vZ=
+SoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573ab=
+d3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025884392%7CUnkno=
+wn%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVC=
+I6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3D6K99LIG2Km9T8V1JG%2BMKz3FDsnuFyuVA0oZydiA=
+kQuM%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845=
+944055.svc.dynamics.com/t/t/nDOOwEgQojpyc2VlYoRQqB0wxoTW2DXtdRkeZ8Gn7s8x/7G=
+lCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"P/Gd76Oj3UsmiKw4R1PVbN=
+oP5y/Daf+Km+CjGUMKkcpZ0tUHwAZDPPlowvAhMKQW/tqeBiRY4d/ukM9wDbWk2C51z+AKtsBc0=
+N4LPeYcXBxaLSqENRz0m7Oq0L4Zg/Kt9hbliTtrCy1A9idES36uNjSOgv/lRH0i2BbWCrD55Dc=
+=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.safelinks.=
+protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d4684594405=
+5.svc.dynamics.com%2Ft%2Ft%2Fg7bsKtu9iyjeOMxANvBbUU1oazqYxmx4XE7hu5n9uG8x%2=
+F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cc=
+a47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C63=
+8481157025890806%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMz=
+IiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DYztMwQ6Ggo8gLxwXy=
+BWKi6vxiakBxxQv5UIa3IwwI%2B0%3D&amp;reserved=3D0" originalsrc=3D"https://5a=
+3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/g7bsKtu9iyjeOMxANvBbUU1=
+oazqYxmx4XE7hu5n9uG8x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=
+=3D"HncRSUU/TuG0YFV+8DrTZBwvOjT32APi2dm/f79NlFwa/UrVQByghUgoFvnMCcYQyUDQiJd=
+BVA7rzIvELaCL43qNiKzji+vixNdt0zxVf6WUEeUrKSsnnUx4oCTlVv0Uvy2wYqgLsCFzzApmcb=
+1qAoUp4SlAazN0+UqT1eH/3bE=3D" style=3D"text-decoration:none"></a><a href=3D=
+"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318=
+f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FHCG8U1XXXqeEhR8mR2gdK=
+O8p9xXS7HjfpWte5KZXm5Yx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;=
+data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435=
+aaaaaaaaaaaa%7C1%7C0%7C638481157025897176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiM=
+C4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;=
+sdata=3DvbvYiuCiU%2BK5Q4SYYdN4MuZ82KUdxSDKRcSmWapwkNg%3D&amp;reserved=3D0" =
+originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/=
+t/HCG8U1XXXqeEhR8mR2gdKO8p9xXS7HjfpWte5KZXm5Yx/7GlCRUix9lmnliZ0R6m85vZSoKpl=
+RUQixFgJAoWGDUAx" shash=3D"VlwPQNtOadB0H1uZ6p9d9JOMhEj02wQquvky+mDAF91GKzbA=
+rIZW5bSCHOe93QG/NYeoKkG6vtrbyQkhSQug0jpVMspERSxz1ag4pH7b5EyAbnkoSKl2xRM5SUC=
+akOs9iG5XTYqpbLXI6NKgF+GgIKcQG43fnvsslz1pU7O4Ozk=3D" style=3D"text-decorati=
+on:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=
+=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%=
+2FibxRDXoc0HvUhdTP1axIIPdLS7mIfCc8qvIIoe6Sgxox%2F7GlCRUix9lmnliZ0R6m85vZSoK=
+plRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d=
+%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025904675%7CUnknown%=
+7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6M=
+n0%3D%7C0%7C%7C%7C&amp;sdata=3DVAY4fwfBTvVr93bgDaV7nPXILbf87Ou1Yj9RYdaGbsA%=
+3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d4684594405=
+5.svc.dynamics.com/t/t/ibxRDXoc0HvUhdTP1axIIPdLS7mIfCc8qvIIoe6Sgxox/7GlCRUi=
+x9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"yw9uyCboylLmcn7c9CsJ/2gEmV7=
+L/q/8mrbohHM6tM84TyCl6aDIM7YZcurutNjDOmxsGzxgjZKIFGPA+Q8u4jU5JLMJTs6KLKbN0s=
+Gl5gINnB4H9Wc1JizRkdasBfM+o4yxY6CWIvFuo3HI0MRHoMNEZ1bKYVxGH2EmIsDDPGA=3D" s=
+tyle=3D"text-decoration:none"></a><a href=3D"https://aus01.safelinks.protec=
+tion.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.=
+dynamics.com%2Ft%2Ft%2FP6fcLAbPfYM7U9BBPResFXaA8uZ5A0mOtZHwtP5xbPAx%2F7GlCR=
+Uix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681=
+f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C63848115=
+7025911273%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJB=
+TiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DqUfaE7nawxAvh2022EcBnUf=
+VcFLeneyQge5rSdJYLNQ%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fc=
+c34e41bf99d46845944055.svc.dynamics.com/t/t/P6fcLAbPfYM7U9BBPResFXaA8uZ5A0m=
+OtZHwtP5xbPAx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"hMh38w=
+2Hz8JqzpMfr/k/uyQ2C5ODuRJ2AWKwSlIzMmZULrs7HfQc3qM7iSj6Blskc7YgjaPoTyLguN9mk=
+I9zpjvx9+y0wl/wk/bMO4J/WmgvtAKu3guRVD2iP9bzGAodddCi70Uz+3LblCGqxX/HAnELbtyW=
+EtbjzfyRS32gzMY=3D" style=3D"text-decoration:none"></a><a href=3D"https://a=
+us01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41=
+bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FWg2ELAFwp9Jbpa96dO2IhtbsLAFhrzH=
+8xxh5gW3ZrEsx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%=
+7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaa=
+aa%7C1%7C0%7C638481157025917627%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDA=
+iLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DoK=
+mqdihjU46rAGByOCe7CxMD3fsx5rTkj4%2ForCB3Lzk%3D&amp;reserved=3D0" originalsr=
+c=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/Wg2ELAFw=
+p9Jbpa96dO2IhtbsLAFhrzH8xxh5gW3ZrEsx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAo=
+WGDUAx" shash=3D"U1eW1dSfw37HIsLuXyPlbNb/r6g961vYfMYVtQ9lBaCFXJOyjQPhPdS2rH=
+FCom/GnRlLDn8+h5Air7Rc3uozRvlEAlud6+sEdoc/VOyOL7qdxPQHf8OCr2H90weIkWdCL/2Eg=
+kVHTIUcoEVeIWRJxCXgciVBDIvqP0nZLz9JEW4=3D" style=3D"text-decoration:none"><=
+/a><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3=
+A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FZ44mK9UZ=
+Ylxx9jXsVt8bou19NYnYSLS7fFLcpOSuPMEx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJ=
+AoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7=
+fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025923971%7CUnknown%7CTWFpbGZs=
+b3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%=
+7C%7C%7C&amp;sdata=3Ds8qrLfBX09BrF9U%2Frex%2B21tyE922lVAVHX1ps5qVcaE%3D&amp=
+;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.=
+dynamics.com/t/t/Z44mK9UZYlxx9jXsVt8bou19NYnYSLS7fFLcpOSuPMEx/7GlCRUix9lmnl=
+iZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"lh+Vp0PrVb5ApO4wMMqbDfTmKCmJuXoRO=
+gBK6TXN8aHDSzygstW12A5mQ44jXqPMbDRs9WJYmESiH5Kw4Lxg9XQQLP0GJB/lGYOoSfN1s7jd=
+Bq3TBEMDW47YETIBX46U1+VYDopx2hxsuMiTKy8BAVbWbAGSPux6pRBNPze6b5w=3D" style=
+=3D"text-decoration:none"></a><a href=3D"https://aus01.safelinks.protection=
+.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dyna=
+mics.com%2Ft%2Ft%2Ftj2O4yu5ztK3xHSk2pEgFxzCpNruSmjsLnVxEZEd7K8x%2F7GlCRUix9=
+lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411=
+b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025=
+930327%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6=
+Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DvpGnLJ%2F2febti5qGCZ9ZFFT6J=
+16hRKSZsFZ966uo7wQ%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc3=
+4e41bf99d46845944055.svc.dynamics.com/t/t/tj2O4yu5ztK3xHSk2pEgFxzCpNruSmjsL=
+nVxEZEd7K8x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"iDTZBaN+=
+u738kl0tL7bRIJ8c+jqG/hQNyY2VnQqImpN6f9vXSGMAJymrfCz5FAlZVgEYEnO8fp6HXcg+Kdr=
+8bwyro7SuJBOO1EM0usmDbtYTnnq1JtQT+q9E+aP0yR6OHmCs+lgvD3sH+bjtTe5nPa9xDn/c4z=
+BYk/WS442Mf6A=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus=
+01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf=
+99d46845944055.svc.dynamics.com%2Ft%2Ft%2FueQjGwKkATqI2pJpVZSyxsUGMD8nn4DD9=
+fmd5HeuvdQx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C=
+02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa=
+%7C1%7C0%7C638481157025936590%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiL=
+CJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3Drkqr=
+sugOHRGTWD59v50RyjcLKQZJ9Qt0XvcgdZ4Yorw%3D&amp;reserved=3D0" originalsrc=3D=
+"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/ueQjGwKkATqI=
+2pJpVZSyxsUGMD8nn4DD9fmd5HeuvdQx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDU=
+Ax" shash=3D"NSasw6/hyrTOTfDbr0DEhuLo8OxksUkFwgxFIobhtmIBWGzQkmLRpqC4RvgcD4=
+HW0wBSDZiyWH4Rp9Wx+6jLuy1S/BUo4Tkowk56rCEQHN8UplHZ/syZ4QSaNshtR8gnYXJ4niKAb=
+fM+wmU/SK6PGpZoE9UbDjhFm4QaTxh7fFc=3D" style=3D"text-decoration:none"></a><=
+a href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F=
+%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FpfTOxxahyD6Z=
+u9y2yxwP1sjRrHOkzeE9exW0eUTgxwQx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWG=
+DUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f=
+640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025942784%7CUnknown%7CTWFpbGZsb3d8=
+eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7=
+C%7C&amp;sdata=3DKplHsZ3AlJyH62s55VyvnCheuFpWlWlVPg181kWaImQ%3D&amp;reserve=
+d=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics=
+.com/t/t/pfTOxxahyD6Zu9y2yxwP1sjRrHOkzeE9exW0eUTgxwQx/7GlCRUix9lmnliZ0R6m85=
+vZSoKplRUQixFgJAoWGDUAx" shash=3D"NE4pYW9WaoCuyM0R/rsfC93Hc837W/Inqlo1I2/7z=
+LvTqGsRUh1EckuIapf/oLGKhGw5++zYWjB9k+rumt9guRTOKBxrIzUhg9o/cIebVvPk1Sd+kUrj=
+hLsK1W7gPL69770XQodcfV+xVJoyfbas6jsQ65Nie2uNTpVRom+9fco=3D" style=3D"text-d=
+ecoration:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.c=
+om/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2=
+Ft%2Ft%2FGPJszkimhqFQNuhENqWf2NH8ghwndEnxpVM80NM8lOUx%2F7GlCRUix9lmnliZ0R6m=
+85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc5=
+73abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025949491%7CU=
+nknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLC=
+JXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DRumR6Vi8wYENGSLY%2FNTZeredd2PDW92eTFy=
+Z%2BNa%2BpK8%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf=
+99d46845944055.svc.dynamics.com/t/t/GPJszkimhqFQNuhENqWf2NH8ghwndEnxpVM80NM=
+8lOUx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"QvC6HXCgA1TX3p=
+/PDIM4rEuKcf499RedaMf22ZGNZAfZWpdlPDpOVpOUAGIuHu5GTnKAdlGSqEaYk4l4c6IYDXgTl=
+fUerGTYAnlm15KDFriELU848Qex4+wHLPtVHNDzEBcjzCUENc5209n27Plgp8s3Twgbudj8jwpv=
+V9qDCXo=3D" style=3D"text-decoration:none"><!--[if gte mso 9]> <v:roundrect=
+ xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"false" style=3D"width:56=
+0px;height:315px;" arcsize=3D"5%">
+<v:imagedata src=3D"https://assets-usa.mkt.dynamics.com/c5c0a3b7-9087-4709-=
+a517-815c2d0dc86b/digitalassets/images/518d604a-d1dc-ee11-904c-6045bd04ccda=
+?ts=3D638454470023095078"/>
+</v:roundrect> <![endif]--> <!--[if !mso]> <!----><img src=3D"https://asset=
+s-usa.mkt.dynamics.com/c5c0a3b7-9087-4709-a517-815c2d0dc86b/digitalassets/i=
+mages/518d604a-d1dc-ee11-904c-6045bd04ccda?ts=3D638454470023095078" style=
+=3D"border-radius:15px;width:auto;height:auto;max-width:100%!important"><!-=
+-[endif]----></a></div><!--[if gte mso 9]> </td></tr></table> <![endif]--><=
+/div></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table></div><div class=3D"emptyContainer columns-equal-class wrap-section=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><!--[if gte mso 9]> </div><div style=3D"backgr=
+ound-color: transparent; border:none;"> <![endif]--><table class=3D"outer" =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:block=
+" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;vert=
+ical-align:top;min-width:5px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner" style=3D"text-align:left;min-width:5px;padding:10px;ver=
+tical-align:top;word-wrap:break-word;word-break:break-word;font-weight:400"=
+ role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px"><h3 style=3D"font-size:18px;mar=
+gin:0;line-height:1.25">Additional Resources</h3></div></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table></div><div class=3D"emptyContainer columns-equal-class wrap-section=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><!--[if gte mso 9]> </div><div style=3D"backgr=
+ound-color: transparent; border:none;"> <![endif]--><table class=3D"outer" =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:block=
+" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer multi" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;vert=
+ical-align:top;min-width:5px;width:290px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer inner" style=3D"text-align:left;min-width:5px;=
+padding:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;=
+font-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px;padding:0"><!--[if gte mso 9]> <=
+table  width=3D"270" style=3D"table-layout: fixed;border-collapse: collapse=
+; width: 270px; padding-top: 0px;padding-bottom: 0px; padding-left: 0px;pad=
+ding-right: 0px; " cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top"> <![endif]--><div class=3D"videoWrapper" align=3D"center=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><a href=3D"https://aus01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynam=
+ics.com%2Ft%2Ft%2Fx6LfIGLWngzlW342agySMvsAc06i61VsliA1OoOaGwUx%2F7GlCRUix9l=
+mnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b=
+802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C6384811570259=
+55744%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6I=
+k1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3D%2F%2FfARKGXuQQuEDEhNBoyYDr%=
+2FDYMv9S507wkCx8ZTaGQ%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6f=
+cc34e41bf99d46845944055.svc.dynamics.com/t/t/x6LfIGLWngzlW342agySMvsAc06i61=
+VsliA1OoOaGwUx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"E6AD0=
+BQVUk4VfXlf6m6SnTdXDDlHS3XujO53yPxPEJcGLkmHu/fW10DbLuRhmZDsF6mBYi1ObX1/UB8p=
+PP8kzliP6FYh0Qc4jKRu/RgTaghgKT1BVaIiIm3Z86X1udjMcKQOCW8lwy1VfWMlanFeyVo180h=
+M76czxIiJ0MF0/Do=3D" style=3D"text-decoration:none"></a><a href=3D"https://=
+aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e4=
+1bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2F7hTim0slKsGqn00ucZ4c29Ru7w35CM=
+Mq6DxnLa88e78x%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05=
+%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaa=
+aaa%7C1%7C0%7C638481157025961488%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMD=
+AiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DP=
+agbNTISjjhTi0%2BvGO8Fjxo5GP5CHj3QDFfy0Px9z6o%3D&amp;reserved=3D0" originals=
+rc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/7hTim0s=
+lKsGqn00ucZ4c29Ru7w35CMMq6DxnLa88e78x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJA=
+oWGDUAx" shash=3D"MWL4b92dBJLA46cKAEHW12UkVcIiHFEhyBamuVv6upZ+PCbMBBHN5VQ3h=
+MrNOz0ehIICJV+H/ox6zBWklXlgB6J6UAiEOGrR0lmEVXGaFHolitP2dTnd86zhJfBmJI6KGmOM=
+CrLG7YRH9J6g2KT4bSFA0hDbLKz5LJVa3frZw7c=3D" style=3D"text-decoration:none">=
+</a><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%=
+3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FELl09LH=
+9MB3QqFkKpxjph9IB3cHuVymwbmmoVxw1a6cx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFg=
+JAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e=
+7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025967250%7CUnknown%7CTWFpbGZ=
+sb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0=
+%7C%7C%7C&amp;sdata=3DPblQNhRyoUF8AYxoorWlBJUUXtFfyErUmZenLsPtWwI%3D&amp;re=
+served=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dyn=
+amics.com/t/t/ELl09LH9MB3QqFkKpxjph9IB3cHuVymwbmmoVxw1a6cx/7GlCRUix9lmnliZ0=
+R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"Gm6SFw11+UHEsvK06YDYJyxCFqPkg6ok0Mxa=
+UVeAwcUdkMnx69py7xJc0znxvsOafdp+x7VNqJ9MJ4lZzdEwZTRgrxCu0CUF1EfBW9HxM+g7gHf=
+rrlepGiOXg06DUTFU8y9iRgpp7yrJCUy41gabFuFAvy6YYdNIyPWmqzwcrt8=3D" style=3D"t=
+ext-decoration:none"></a><a href=3D"https://aus01.safelinks.protection.outl=
+ook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.=
+com%2Ft%2Ft%2FfbvVxJvfVxyaqdyDhuzm1dbxnUKzhhxoXWl4aT8NO8Ux%2F7GlCRUix9lmnli=
+Z0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b8028=
+08dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C63848115702597306=
+4%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1ha=
+WwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3D2PIUaudG7bTm%2Fm2gWEuEJjCvekXC3I=
+KSof%2Bnf116ZU4%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e4=
+1bf99d46845944055.svc.dynamics.com/t/t/fbvVxJvfVxyaqdyDhuzm1dbxnUKzhhxoXWl4=
+aT8NO8Ux/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"cmSJcD6/tkP=
+nHGVny4Iomfvi9HAonMAr1gzzhnWR//XWRP4fuIg2kCVROjHqceVKYeI0E+Qdsw7Q8pHC76A5eR=
+syL1udWEOdWt64Y1sxUmenH0AqzwLrCL87ahzn8CiDt6OrADmWultTVOMhPG8xEY+FsRuxhpILe=
+M73HxMe83U=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.=
+safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d=
+46845944055.svc.dynamics.com%2Ft%2Ft%2F1bQYsxb36yUjDW8cqy0V68RpL5ko4pJY8sje=
+JxnEpG4x%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%=
+7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C=
+1%7C0%7C638481157025979373%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQ=
+IjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DsPdKoMl=
+nbB%2FyEvAXOPwmJYrr8cvK3kHoGDHAqFhw1E4%3D&amp;reserved=3D0" originalsrc=3D"=
+https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/1bQYsxb36yUjD=
+W8cqy0V68RpL5ko4pJY8sjeJxnEpG4x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUA=
+x" shash=3D"BCuDqLS3HRzKbO86Ibj40fgdfMQS3dOeM1nHzWXu9Sg7v/QKwTKSwZbKn6O0lJj=
+x5DB1PMfqvo8BMJ09CIEOiH9L4ZozMFIeFJpgxUUoX3SVPgkmJq6M0ngzv6cd5siFniwdhJtm7V=
+1rUN8HwZmS2WxZtoHK7LhyWrxi+GNVuLU=3D" style=3D"text-decoration:none"></a><a=
+ href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%=
+2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FcJSYuUmxLhtOm=
+Lhhej7kLufgYUUMWeUIMx17xbLhKFox%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGD=
+UAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f6=
+40afb435aaaaaaaaaaaa%7C1%7C0%7C638481157025985991%7CUnknown%7CTWFpbGZsb3d8e=
+yJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C=
+%7C&amp;sdata=3DQedIQ7%2FAMVpl9EdQxsujb%2FEifSdhiAlPJXduh1Iji%2Bw%3D&amp;re=
+served=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dyn=
+amics.com/t/t/cJSYuUmxLhtOmLhhej7kLufgYUUMWeUIMx17xbLhKFox/7GlCRUix9lmnliZ0=
+R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"Km6pnY4aNFSPjWdIbnDcbPsxHbRWpSiITC/j=
+Pasnly2mj7ESBodIvWfWSVeKosfxg0jxmk1VqU6msFcQTNZDhdVyjxKEku3I9yq0vB0T1EJqwIQ=
+qcQcOxpnjdY1GE1CrDQg3QIT9WM9Faw1yIj/l5Tt+so3n4faaGP+6tiClcmY=3D" style=3D"t=
+ext-decoration:none"></a><a href=3D"https://aus01.safelinks.protection.outl=
+ook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.=
+com%2Ft%2Ft%2FVmJvVLGa1VdruRMDZdHm0xA99xdnf6GCN1toMdBTle8x%2F7GlCRUix9lmnli=
+Z0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b8028=
+08dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C63848115702599232=
+4%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1ha=
+WwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DF4ANRojMmzACvbjJl6GGmg%2FKUVeNs%=
+2BQRJQS6okJid6k%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e4=
+1bf99d46845944055.svc.dynamics.com/t/t/VmJvVLGa1VdruRMDZdHm0xA99xdnf6GCN1to=
+MdBTle8x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"bBNBFlUjT11=
+QRp4gHFw/ptyEbwD9d8IGciWUqY8U5cfbSJ/bwQKWUvHs8Df3TO0q/Q/PUQX3UjwrRPZHDqT/8G=
+Qw4A6DmGXg1809Ldlx79L3hUH1ZXia5Y8uqVm8f90yEYwqs6a0k+js2/hIL+enS/C6v68k4Jtqm=
+ikLu8jeEwA=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.=
+safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d=
+46845944055.svc.dynamics.com%2Ft%2Ft%2FkWbQVQd6gJJlSW3xDOPVErm4CiaviCfpjQdx=
+prKCc9wx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%=
+7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C=
+1%7C0%7C638481157025998619%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQ=
+IjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DI%2BYv2=
+ZFb9EFGKHptdARgURCUzAcRZG0F8FpmUMDAOVU%3D&amp;reserved=3D0" originalsrc=3D"=
+https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/kWbQVQd6gJJlS=
+W3xDOPVErm4CiaviCfpjQdxprKCc9wx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUA=
+x" shash=3D"eNKS6ZF3B+EYTZ/nrnpL7moCclu28WLFqrn9mHQeanQxPp4jGcU0fxYsASEP1qU=
+Rf0Cj/1gvI0OsV73jSsJC/ZseUotxjAXxapmSRE2RQskq7KUkQQbcthZ+ekmcv3830MvYgADgHV=
+yO2V0bIlNfrUWltutxw7CkAL1Svrlql6I=3D" style=3D"text-decoration:none"></a><a=
+ href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%=
+2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FASkkjD3hcXYCE=
+93yQQVrECZHrr4gv9flzxRTTLi6tSQx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGD=
+UAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f6=
+40afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026004798%7CUnknown%7CTWFpbGZsb3d8e=
+yJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C=
+%7C&amp;sdata=3DbnueO%2BXd5bqsqtT58yaWFNVvRqvngZ0JbEhnxJk8Ulw%3D&amp;reserv=
+ed=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamic=
+s.com/t/t/ASkkjD3hcXYCE93yQQVrECZHrr4gv9flzxRTTLi6tSQx/7GlCRUix9lmnliZ0R6m8=
+5vZSoKplRUQixFgJAoWGDUAx" shash=3D"BNn/uRzITVipdob7B6P85PxRaxIdMZUaog+0ho5k=
+dphaX2J/qcR28Mhyl4o6KotLm9mlKQJwrMcZmG5cJ08FmHrf0CogbxHi43G/Mih71GRNAGzVTgt=
+P2OXGIsdzztqQGzQaPb2b3Fz/Py8lOD8Snm9pTGcUrMNYYHP0oyMNc5I=3D" style=3D"text-=
+decoration:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.=
+com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%=
+2Ft%2Ft%2FT18a2TMGkNJ0QAyDpEYPOMKMhSOKCoyI7N1qpAQwSRAx%2F7GlCRUix9lmnliZ0R6=
+m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc=
+573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026011445%7C=
+Unknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiL=
+CJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3D%2BabBdrEs38tg1QQOdijhVuOTVjmhxTIBAL=
+iWbpfymzE%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d=
+46845944055.svc.dynamics.com/t/t/T18a2TMGkNJ0QAyDpEYPOMKMhSOKCoyI7N1qpAQwSR=
+Ax/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"Cr6n2b7Llz+QE0Dt1=
+WKkhrx0SPa0Tbt4YZdGbcbYDPwOCq+RLCw5/3w3Ipwby5HvCDt3aE/ccCB/u7L85DFRwfywQM5q=
+X/ErLvBTFqybiOIunriVpyQDL23F0uhzSR3qTKH2kBvuiVjcM7rnsLwlQmDaRof3+19seKLmbxq=
+10zI=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.safeli=
+nks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d468459=
+44055.svc.dynamics.com%2Ft%2Ft%2FfPnf5CDU9AbaZYfSKIdG9p6qPibBEO7bGJjkJgYiHO=
+Qx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf=
+88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%=
+7C638481157026017751%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2=
+luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DtA2YwHsU26VqH=
+%2B0TI6BNmQlex8CnFtWisK5Iy5srUQk%3D&amp;reserved=3D0" originalsrc=3D"https:=
+//5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/fPnf5CDU9AbaZYfSKId=
+G9p6qPibBEO7bGJjkJgYiHOQx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" sha=
+sh=3D"pSqHFhqbh8coZc1G+tSL42R/CWbqaPkgzGNqXQZPwP+1gSV0d2mTFk8X+m19LK87sXIjR=
+r8txUrQEIY8PbiWdofadI8UtAvSE3JC/GmoTyZjgfF0y8XsQu9iqA5NnN5HC1dcVBzlh6uKmuDq=
+maXWhcoEZ7qPq6H2Yr4GH+IZbL4=3D" style=3D"text-decoration:none"></a><a href=
+=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3=
+318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2F9D6AilexIOZ9QEoeYm=
+p2qMnnpT4Z8VCY806xp1ek7gIx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&a=
+mp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb=
+435aaaaaaaaaaaa%7C1%7C0%7C638481157026023575%7CUnknown%7CTWFpbGZsb3d8eyJWIj=
+oiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&a=
+mp;sdata=3D9mD6uc%2BMrPKDQunI%2BMQTRVBXNsDMYyy%2FMe74itP%2F818%3D&amp;reser=
+ved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynami=
+cs.com/t/t/9D6AilexIOZ9QEoeYmp2qMnnpT4Z8VCY806xp1ek7gIx/7GlCRUix9lmnliZ0R6m=
+85vZSoKplRUQixFgJAoWGDUAx" shash=3D"E3KxKQ58I1ESLKCrCBnOfKyahDqDUuxwjDRRGGQ=
+m6EU2mPCRxQgII5E8eHDLD9VUVgjleb18AJIrcltQzmvIpRNFA6Zh9iO5zJFtc9NX8BaibzQw2C=
+vzTlrVwL6YkKRtxlRaDESgwRkOBCUbu+Y3dGyU+ol3/cWRRFAeTEqUo80=3D" style=3D"text=
+-decoration:none"></a><a href=3D"https://aus01.safelinks.protection.outlook=
+.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com=
+%2Ft%2Ft%2FxUcqKFXxfHpUvdwE8o3UQVPy0tccL1JEAyno9yW5ioQx%2F7GlCRUix9lmnliZ0R=
+6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808d=
+c573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026029947%7=
+CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwi=
+LCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3De0Sw5yHnbqeB2QWBmZ6qjWHp9J%2BK%2BhE=
+jyceJzPlMwnM%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf=
+99d46845944055.svc.dynamics.com/t/t/xUcqKFXxfHpUvdwE8o3UQVPy0tccL1JEAyno9yW=
+5ioQx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"ExH8jhMchAQ/AK=
+q6Z9CbyOQ6Tx/la+oT9ifEydJV2OqrgsS/wPoNOjO2zqphvD54Y1n0guuMbKKFHOVjBJRZjY0V1=
+cwz+BmecYklxFqZ7W+I87ge7PJLmqk8nxmjJk03G0HtCm1My3NcRdxZ4KIUmv31i83CDLRUHfvr=
+QbXPXbI=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.saf=
+elinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d468=
+45944055.svc.dynamics.com%2Ft%2Ft%2FLs0hqjGjgSzj9DBQgx4UWSxUxBg1riEsP8LBUDh=
+Gemcx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%=
+7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7=
+C0%7C638481157026036362%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjo=
+iV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DNtwBFlX3f7=
+ljDI49GcIGyak9hnLYET43LGuSi8Fo1Kk%3D&amp;reserved=3D0" originalsrc=3D"https=
+://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/Ls0hqjGjgSzj9DBQgx=
+4UWSxUxBg1riEsP8LBUDhGemcx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" sh=
+ash=3D"G325ARjIrzfv2CY/6uG8Ao3vx5dTixy/tM9ZgdY/YoDj6/7/cKkXse6FhmtWWgkC0P2h=
+nVTmdgiRE15uoDgQ0H9acl1rpAHYMmuq0uHnPNNlgewpU378njnCWZUL76en2HR7xqnIER4jIHj=
+Ysc83BS805j+TQS1AsaeKNz4k0/U=3D" style=3D"text-decoration:none"><!--[if gte=
+ mso 9]> <img src=3D"https://assets-usa.mkt.dynamics.com/c5c0a3b7-9087-4709=
+-a517-815c2d0dc86b/digitalassets/images/a650683c-e5d0-ee11-904d-6045bd023ad=
+4?ts=3D638441361550404373" style=3D"border-radius: 0px; width: auto; height=
+: auto; max-width: 100% !important;" width=3D"270" height=3D"151"> <![endif=
+]--> <!--[if !mso]> <!----><img src=3D"https://assets-usa.mkt.dynamics.com/=
+c5c0a3b7-9087-4709-a517-815c2d0dc86b/digitalassets/images/a650683c-e5d0-ee1=
+1-904d-6045bd023ad4?ts=3D638441361550404373" style=3D"border-radius:0;width=
+:auto;height:auto;max-width:100%!important"><!--[endif]----></a></div><!--[=
+if gte mso 9]> </td></tr></table> <![endif]--></div></th>
+</tr>
+</tbody>
+</table>
+</th>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;vert=
+ical-align:top;min-width:5px;width:290px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer inner" style=3D"text-align:left;min-width:5px;=
+padding:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;=
+font-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px;padding:0"><!--[if gte mso 9]> <=
+table  width=3D"270" style=3D"table-layout: fixed;border-collapse: collapse=
+; width: 270px; padding-top: 0px;padding-bottom: 0px; padding-left: 0px;pad=
+ding-right: 0px; " cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td valign=3D"top"> <![endif]--><div class=3D"videoWrapper" align=3D"center=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><a href=3D"https://aus01.safelinks.protection.=
+outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynam=
+ics.com%2Ft%2Ft%2F5M6MGu6EYw6b6WjhpuKKNCuRJwaePRFD6t6f5p5m8TQx%2F7GlCRUix9l=
+mnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b=
+802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C6384811570260=
+42640%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6I=
+k1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DGOrOSTs9L6LalPQNWC%2B1u1N333=
+AqjITAYq%2FcFjkqJeg%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc=
+34e41bf99d46845944055.svc.dynamics.com/t/t/5M6MGu6EYw6b6WjhpuKKNCuRJwaePRFD=
+6t6f5p5m8TQx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"qHtkACo=
+5HMC1+7uIA9aT7NlklvZq2a5Ohtu9Qrhqj/vHRC+Rt0bISGFpbZjRjrQg3CISMfyHA39r8E/nRx=
+Gmy3O5vLHvlrsCgp/n/UHxcJllx0DCf+C/WyicO1cp6XrLuWCu+/4NdnpQBKk0DECsNKmxvq9GT=
+vJxec7+ZurBuVo=3D" style=3D"text-decoration:none"></a><a href=3D"https://au=
+s01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41b=
+f99d46845944055.svc.dynamics.com%2Ft%2Ft%2FDkL0yxw6mCoyReYBFpEaxmxga3X9R39f=
+qDp9no7ckJMx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7=
+C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaa=
+a%7C1%7C0%7C638481157026048840%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAi=
+LCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DRxa=
+k9HcwvGaEadjHIun9ikL3FyHaQ6x50AfVtxr4p5I%3D&amp;reserved=3D0" originalsrc=
+=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/DkL0yxw6m=
+CoyReYBFpEaxmxga3X9R39fqDp9no7ckJMx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoW=
+GDUAx" shash=3D"Uo2hU17NvHxa6juGVQGzUU3tfhp/rkHkb/y+VtM/8+DUpd3polraIiYtpO6=
+tnRKhUBmHNT7ZY6ipoJwON8PSjCLfIh9HeWliqYaTG7Ld50rfuVKx4zd9+X0DkQAhSSyDxWCdSh=
+r3iysFxpt1Vb0ez4Lpv11yJ6ZsAKmfxiWbgkQ=3D" style=3D"text-decoration:none"></=
+a><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A=
+%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FRahNVsqIh=
+u4GZtk0S4Dwn1VITCrDhUGwvel8DIAuaEcx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJA=
+oWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7f=
+e9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026056425%7CUnknown%7CTWFpbGZsb=
+3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7=
+C%7C%7C&amp;sdata=3D0InEzKji2GdJ1dWcPcSnM3%2BqiYGMNlW%2BvRULo5k69SI%3D&amp;=
+reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.d=
+ynamics.com/t/t/RahNVsqIhu4GZtk0S4Dwn1VITCrDhUGwvel8DIAuaEcx/7GlCRUix9lmnli=
+Z0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"fkIeA1xDkdTBPNPbUjpituCCK54+FUqp8/=
+qKHA/jeL+iFXqxaqAYHkAM6xtWxaNxv6FC3vGF0SzDTO6dgN91MhjnSLI7bmCbJT9BCgt2rWktu=
+CXC9xmBXS4hXG2sJIKKhcQcsSQs4cdtwnHR7Bz0gOdpxde/5zTbiTmVIZdMObs=3D" style=3D=
+"text-decoration:none"></a><a href=3D"https://aus01.safelinks.protection.ou=
+tlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamic=
+s.com%2Ft%2Ft%2FePtFyOeBmsxipoYMhbDKUsOEnbZaDjpDrqFxAOtOYa8x%2F7GlCRUix9lmn=
+liZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b80=
+2808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026063=
+341%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1=
+haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DTXkkJywg%2BQEV0UrQkADWpYFzJ8Yk=
+GltgVrQ5mO9Ad9s%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e4=
+1bf99d46845944055.svc.dynamics.com/t/t/ePtFyOeBmsxipoYMhbDKUsOEnbZaDjpDrqFx=
+AOtOYa8x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"FB9EYSrPhUg=
+0fvFb2WpqDIN638912P3n8AnsrfVRoowRCtIvMaz0swC54FYcVhlMZwx9UI8GLg9rgyG0H7kkTK=
+flYjj6hdFBIBGFkSSAtu2julqsly2330ut/ESH+XLO8QWUekUbydKxu39cgclMlyXPYaFaiUj+x=
+DZ4/+vY6tg=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.=
+safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d=
+46845944055.svc.dynamics.com%2Ft%2Ft%2FLlItri61KVW2bMJWrB1Kvxsn5mIszxYeKdBq=
+fhnkq5Ux%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%=
+7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C=
+1%7C0%7C638481157026069723%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQ=
+IjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DZhGZjFJ=
+GjIFUrrhU3TZlxL7BU%2FrPD5tf16yXoulqW0Q%3D&amp;reserved=3D0" originalsrc=3D"=
+https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/LlItri61KVW2b=
+MJWrB1Kvxsn5mIszxYeKdBqfhnkq5Ux/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUA=
+x" shash=3D"QBDoJ6RuSqDAs8U4CSt0Fv+UfvKeeKGhrNDsh1Y3kSDQTQ0tbkl542aQt/6AxXT=
+/ooyjBBcMfX7cyWgzQNlYTqkmzuh0i8KxZ/KIGiA7H7c1GOuRZn4tvLY/7OVH855JTQzjCRsRg5=
+NDFTelrwaomItwP33yXEF5gtHBnZw+E5o=3D" style=3D"text-decoration:none"></a><a=
+ href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%=
+2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FEV26xF0u9hoHG=
+9HZU6XfTR9eGwqVxPAzvQ8GdkwFVCYx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGD=
+UAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f6=
+40afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026075946%7CUnknown%7CTWFpbGZsb3d8e=
+yJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C=
+%7C&amp;sdata=3De6cExkVG%2B%2B6YNDtlNow8UABg1DoC5M1EC62RHCvHoqk%3D&amp;rese=
+rved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynam=
+ics.com/t/t/EV26xF0u9hoHG9HZU6XfTR9eGwqVxPAzvQ8GdkwFVCYx/7GlCRUix9lmnliZ0R6=
+m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"NmDo2Znrv7rMa/rLkPA8UUlwXEPAomuX+kXifR=
+UjZpUYVW2FfH77worTvonAWjRoMshLNOT0ld72e7QG4Dy5OQZpQwro887XT/5xLTkvUr4pFjYOp=
+PLTc5turR7Gd/2MMsusNcnVd8zLcoRJrJexyAwp9YlXZhw5m3FuwVzcfmY=3D" style=3D"tex=
+t-decoration:none"></a><a href=3D"https://aus01.safelinks.protection.outloo=
+k.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.co=
+m%2Ft%2Ft%2FANqNcu6fjMzbefQiDhpEWMOi0HvLHSL8TXpcxWtXMlMx%2F7GlCRUix9lmnliZ0=
+R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808=
+dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026082377%=
+7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWw=
+iLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3Dg4G9E0lWeAGQANtPfNhWBpMZDeBlwOX8fR=
+woMxiRxeM%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d=
+46845944055.svc.dynamics.com/t/t/ANqNcu6fjMzbefQiDhpEWMOi0HvLHSL8TXpcxWtXMl=
+Mx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"HqQ+1+vgpuu/sadIO=
+ccNslrEdNEKM0qP8Uw+Db//VUO3MqylDjCBoNBb4bwvLnKb1mI04e2abNdQ4cDn7SY4qhguxafh=
+liniwsPurn+8AK3u00O0F5lEyp1uEAMS8cNeepOJU9aft8Y/1+r0DcGQAAlIwBVH3+UCp8ZJZX4=
+nZvg=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.safeli=
+nks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d468459=
+44055.svc.dynamics.com%2Ft%2Ft%2FW7TfxtEbkRnxi4R0caU9X0tSGgdPCP4c2Fsd6mw3ce=
+Mx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf=
+88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%=
+7C638481157026088590%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2=
+luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DygAuhX8B3FNa7=
+lGucU%2FP%2B4XdpgCRN%2FO3EN6%2BFYTaThA%3D&amp;reserved=3D0" originalsrc=3D"=
+https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/W7TfxtEbkRnxi=
+4R0caU9X0tSGgdPCP4c2Fsd6mw3ceMx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUA=
+x" shash=3D"ziVg2jB7OwsfoqRkqNWOTjOrHHdMR3JZ9ecXjE9Iz5pzQIdASvSU2qKPGTcLozA=
+mE3etNzxU1XncLwKGOI8leo4kwuC6N2e/fj21+MmRrvCNugzAa/wd7J2jg5TqbHtEs2nnF7otxd=
+52r0Fj8Kux/S/bqeMYJKWLXJTVVmp5ozo=3D" style=3D"text-decoration:none"></a><a=
+ href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%=
+2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2Fhumjoob94xZHl=
+kwsdvCgsDMfMTgFf7mTwWbgs3XcTXgx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGD=
+UAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f6=
+40afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026094995%7CUnknown%7CTWFpbGZsb3d8e=
+yJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C=
+%7C&amp;sdata=3DIHmu7T2tAoMS9D6gzIsVcpO9NYti3EU4ZT2y8IrSwKY%3D&amp;reserved=
+=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.=
+com/t/t/humjoob94xZHlkwsdvCgsDMfMTgFf7mTwWbgs3XcTXgx/7GlCRUix9lmnliZ0R6m85v=
+ZSoKplRUQixFgJAoWGDUAx" shash=3D"h2UIPxmSxpKSIvvUZfj54p1yzWVPaJ0b5MGYc+zQSa=
+UPfxEX4Hp0wdGKOn1CMpRzKwpc8flNV1wBA+NBhM715RA+H8EM8RJ5HH4ixCOV+TPGo9/sEVCOd=
+XVh4Gy0wNRm7ehQexfOHQTnqmyffgvQjLegDnw4V4moUfdYjHrdmAw=3D" style=3D"text-de=
+coration:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.co=
+m/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2F=
+t%2Ft%2FjUcT05lpLOvUYFTttlx7sdA1ugea2Ny0FV9GhxaSiYQx%2F7GlCRUix9lmnliZ0R6m8=
+5vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc57=
+3abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026101406%7CUn=
+known%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJ=
+XVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DgGyoq18GR%2BVm4zXoeCfBOIYzfWXjBsuXLZ6I=
+luL6ZPM%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46=
+845944055.svc.dynamics.com/t/t/jUcT05lpLOvUYFTttlx7sdA1ugea2Ny0FV9GhxaSiYQx=
+/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"jvlbKzog9dJTesy9WR0=
+JPf/G0lf0QHdZgIn+4UYjbK2CE1eDLLeIBS3SR2h3qf0RnCHHtEmOuD2676fzRY2sOHHOAgcDnN=
+Wl4Gif+FWNEbHXW/yUkHqCIGTVbJFgHQOQ2k0XyG9hztKFs8uHb/b0mq/dYITdaEuEbTyTCZRhq=
+j8=3D" style=3D"text-decoration:none"></a><a href=3D"https://aus01.safelink=
+s.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944=
+055.svc.dynamics.com%2Ft%2Ft%2FxmDPJU1ywPc6vwWH2wjkbNG24sm52oNgxJtnp2rP0Dox=
+%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88=
+cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C=
+638481157026107611%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2lu=
+MzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DuB4zTcMTHDCvtN6=
+RbKOLM%2BANpEQ5AtJmghp62ReaPtw%3D&amp;reserved=3D0" originalsrc=3D"https://=
+5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/xmDPJU1ywPc6vwWH2wjkb=
+NG24sm52oNgxJtnp2rP0Dox/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=
+=3D"LU/pm98AZFsPYsUFfzO0lPlKtWiH+xQdMxi8Q/hWs5Wox0MbEY3i+WmtUOxc/ibicGxTb0W=
+viTM1daijoV46Dyu8ZkkUAWQVIVEJaXiQrHc7+VnO4s59ReX7mbHutonkPy7UvAMmIUAzAyknek=
+A0GVXbV4wB9/1OcXy06pfeLVA=3D" style=3D"text-decoration:none"></a><a href=3D=
+"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318=
+f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FLuDecSU4Sxi251vGWb0sQ=
+yETPX3movt0i6nMKDBxBZQx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;=
+data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435=
+aaaaaaaaaaaa%7C1%7C0%7C638481157026113912%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiM=
+C4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;=
+sdata=3D86Lwnxm5NZ4cLrq3Fx1ZBlbqryjrNKo6uVpzqNrKzdo%3D&amp;reserved=3D0" or=
+iginalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/=
+LuDecSU4Sxi251vGWb0sQyETPX3movt0i6nMKDBxBZQx/7GlCRUix9lmnliZ0R6m85vZSoKplRU=
+QixFgJAoWGDUAx" shash=3D"fFdEleTY4vD1w8KWGEgvTey8you1WX0ZDDVgtOa3DqG/5m20XZ=
+WIiH1BmbOBNU2IDX4DYcDBTEPipoYIiySlWg4eKQ1zwqhn9X2J73igaPkguz0Tmgh76+zMPSQtR=
+YAS19eFnil2l+wqXqOzDcCAGmUbuvc7fQqBJ92aSUy22c0=3D" style=3D"text-decoration=
+:none"></a><a href=3D"https://aus01.safelinks.protection.outlook.com/?url=
+=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%=
+2F2piZx7wxxqw8TGQ4Ml4629xywSOEy4IXe40yhl6zSbMx%2F7GlCRUix9lmnliZ0R6m85vZSoK=
+plRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d=
+%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026120241%7CUnknown%=
+7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6M=
+n0%3D%7C0%7C%7C%7C&amp;sdata=3D%2FLpi7n0HrDw7Y6OIgkIcIw9OaBzcPiz%2F3UlvoU97=
+EUk%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d468459=
+44055.svc.dynamics.com/t/t/2piZx7wxxqw8TGQ4Ml4629xywSOEy4IXe40yhl6zSbMx/7Gl=
+CRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"ix0Uh7cET8+Vu4jhw8wAr+a=
+Db7vA45qBB4LQOBLGB49CB6oL47xM81yy22W+VQSNxjnuZcbfuqlxFq9+JevIXqdqziB78dcNd7=
+CJv/+9vzqyPTRTVkfQU2wxmwRgrvEpiKX91A+rBJ0D0E3WLaiYaHBX1h4nKMk30v7y9vzjdck=
+=3D" style=3D"text-decoration:none"><!--[if gte mso 9]> <img src=3D"https:/=
+/assets-usa.mkt.dynamics.com/c5c0a3b7-9087-4709-a517-815c2d0dc86b/digitalas=
+sets/images/44ece17a-e5d0-ee11-904d-6045bd023ad4?ts=3D638441362629987868" s=
+tyle=3D"border-radius: 0px; width: auto; height: auto; max-width: 100% !imp=
+ortant;" width=3D"270" height=3D"152"> <![endif]--> <!--[if !mso]> <!----><=
+img src=3D"https://assets-usa.mkt.dynamics.com/c5c0a3b7-9087-4709-a517-815c=
+2d0dc86b/digitalassets/images/44ece17a-e5d0-ee11-904d-6045bd023ad4?ts=3D638=
+441362629987868" style=3D"border-radius:0;width:auto;height:auto;max-width:=
+100%!important"><!--[endif]----></a></div><!--[if gte mso 9]> </td></tr></t=
+able> <![endif]--></div></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table></div><div class=3D"emptyContainer columns-equal-class wrap-section=
+" style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;b=
+ackground-color:transparent"><!--[if gte mso 9]> </div><div style=3D"backgr=
+ound-color: transparent; border:none;"> <![endif]--><table class=3D"outer" =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:block=
+" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;vert=
+ical-align:top;min-width:5px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner" style=3D"text-align:left;min-width:5px;padding:10px;ver=
+tical-align:top;word-wrap:break-word;word-break:break-word;font-weight:400"=
+ role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px"><h3 style=3D"font-size:18px;mar=
+gin:0;line-height:1.25">=F0=9F=8F=86Don=E2=80=99t forget to verify your tro=
+phy for this learning path!&nbsp;</h3><p style=3D"margin:0;padding:0;line-h=
+eight:1.25;mso-line-height-rule:at-least"><span><span><span><a href=3D"http=
+s://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc=
+34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FKkdESneAEBWy57RgM4imaYZvqK=
+7EIijvq9ZENl59foUx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=
+=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaa=
+aaaaaaaa%7C1%7C0%7C638481157026126421%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wL=
+jAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdat=
+a=3DVPTuxziLRcmokAE%2BfXsL4ksZwQD2o26PnJ9JiRf8D3o%3D&amp;reserved=3D0" orig=
+inalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/Kk=
+dESneAEBWy57RgM4imaYZvqK7EIijvq9ZENl59foUx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQi=
+xFgJAoWGDUAx" shash=3D"r9l9zbmBoLw+t0R+qe82mQNp5dvVV2jszUs+giXt5X4fupb/9GdK=
+oSWzrinPKC8XezMPsJaRc79yG1DchxnPAgPjD0kl0az44i2b47eDHEqw3vXVnDjLwCnKbHaUQTq=
+H/u9KX7BXDmhMZM4THIV0fQETqli+FV+kmzVv7HTQAw4=3D" data-msdyn-tracking-id=3D"=
+4c734e0b82aea1709333941539" style=3D"text-decoration:none">Go to freeCodeCa=
+mp</a></span></span></span> to verify that you completed the training conte=
+nt. Here, you'll find instructions to accomplish this verification.</p><p s=
+tyle=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at-least">=
+<br></p><h3 style=3D"font-size:18px;margin:0;line-height:1.25">Have any que=
+stions?</h3><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height=
+-rule:at-least">Head to the freeCodeCamp C# forum: <span><span><span><a hre=
+f=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a=
+3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FCVO4KNePbozWxU5NT=
+6iT3W1MT50yiYLPE5eb1UIkwV4x%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&=
+amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640af=
+b435aaaaaaaaaaaa%7C1%7C0%7C638481157026133260%7CUnknown%7CTWFpbGZsb3d8eyJWI=
+joiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&=
+amp;sdata=3DivEWKlY7cckvGcn9VrlUCULjMPWJtnz4RWX9Dy7hHJE%3D&amp;reserved=3D0=
+" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/=
+t/t/CVO4KNePbozWxU5NT6iT3W1MT50yiYLPE5eb1UIkwV4x/7GlCRUix9lmnliZ0R6m85vZSoK=
+plRUQixFgJAoWGDUAx" shash=3D"ujxpXTH0Nz9WoYSV/7j9GrPlrO/xyOqJOTwMAzCWGqYQ6B=
+s3iHoDANwy4twL7ug+dE/A/xQ9idTKj4S9t5/e6WjwajQ96JvW06YZg8OctEz4SQSNkrHZvuJdc=
+PbixOIQtEWRx019znjljjHE9em9I09GGdGUtRWdpoo6ISa3Nuo=3D" style=3D"text-decora=
+tion:none">https://aka.ms/certification-help</a></span></span></span>&nbsp;=
+&nbsp;</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-r=
+ule:at-least"><br></p><h3 style=3D"font-size:18px;margin:0;line-height:1.25=
+">Next Week</h3><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-he=
+ight-rule:at-least">This week you learned to write your first code using C#=
+. Next week, you'll learn how to create and run simple C# console applicati=
+ons. You'll also learn how to use a professional developer tool, Visual Stu=
+dio Code!</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-heigh=
+t-rule:at-least"><br></p><h3 style=3D"font-size:18px;margin:0;line-height:1=
+.25">Looking for more?</h3><p style=3D"margin:0;padding:0;line-height:1.25;=
+mso-line-height-rule:at-least">Sign up to be notified of future .NET Learni=
+ng Series:&nbsp;<span><a href=3D"https://aus01.safelinks.protection.outlook=
+.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com=
+%2Ft%2Ft%2Ftxif2LbRLKQrKnO8so90O7H8EGobxmFnva8aHdD96r8x%2F7GlCRUix9lmnliZ0R=
+6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808d=
+c573abd3d%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026139813%7=
+CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwi=
+LCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3DJsfXgIXx1%2FmFHzAOE6vVX6ZlyxuLYQ8R%=
+2FYvmF6LS7ZU%3D&amp;reserved=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf=
+99d46845944055.svc.dynamics.com/t/t/txif2LbRLKQrKnO8so90O7H8EGobxmFnva8aHdD=
+96r8x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"gDKKxmymf3gxhR=
+BMb1MNvVD9xEh1S5bq/lTVecgdiytIz8i400aXyOJPrHgSN0v3PJnqlDvKkrDuHuh0VdXC5JS3K=
+hDdgG9kARq+mYEi0psxT9JzytqkRzt3L26lo1SgkwWiburnm67oa9sGgU9Om8Esu+sgSwLzD+ti=
+m7iynos=3D" style=3D"text-decoration:none">https://aka.ms/learningseries/fu=
+ture/signup</a></span></p><p style=3D"margin:0;padding:0;line-height:1.25;m=
+so-line-height-rule:at-least"><br></p><p style=3D"margin:0;padding:0;line-h=
+eight:1.25;mso-line-height-rule:at-least">Happy Coding=F0=9F=8E=89</p></div=
+></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table></div>
+<div class=3D"columns-equal-class wrap-section" style=3D"font-family:Arial,=
+Verdana,sans-serif;font-size:14px;color:#000;background-color:transparent">=
+<!--[if gte mso 9]> </div><div style=3D"background-color: transparent; bord=
+er:none;"> <![endif]-->
+<table class=3D"outer" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse:collapse;display:block" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height=3D"0"><td>&n=
+bsp;</td></tr> <![endif]--><tr>
+<th style=3D"background-color:rgba(0,0,0,0);border-radius:0;padding:10px" r=
+ole=3D"presentation">
+<table style=3D"display:block;width:100%;border-collapse:collapse" class=3D=
+"containerWrapper tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;min-=
+width:5px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner ui-sortable" style=3D"text-align:left;min-width:5px;padd=
+ing:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;font=
+-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px">
+<p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at-lea=
+st;text-align:center">
+<span style=3D"font-size:11px">=C2=A9 2024 Microsoft Dynamics. All rights r=
+eserved.</span>
+</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at=
+-least;text-align:center">
+<span style=3D"font-size:11px">Microsoft Redmond</span>
+</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at=
+-least;text-align:center">
+<a href=3D"https://aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2=
+F%2F5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FwbF3TJAF8IP=
+2S1qlGUqPwc3G1QVc5DJ8cdxwzqoiayIx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoW=
+GDUAx&amp;data=3D05%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9=
+f640afb435aaaaaaaaaaaa%7C1%7C0%7C638481157026146667%7CUnknown%7CTWFpbGZsb3d=
+8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%=
+7C%7C&amp;sdata=3DcC21BeJ4iNbBndoqf06clhGhrwas1CTkJP8%2FQvG%2BnQQ%3D&amp;re=
+served=3D0" originalsrc=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dyn=
+amics.com/t/t/wbF3TJAF8IP2S1qlGUqPwc3G1QVc5DJ8cdxwzqoiayIx/7GlCRUix9lmnliZ0=
+R6m85vZSoKplRUQixFgJAoWGDUAx" shash=3D"Pm6+5GfQHxet6ZcRd7k2l0URw+ebwxAZa0L0=
+F4tYSHGzAAtvn/RpfZmfztgUaV9NFCIW8tKdGd4Idc6JxkrRbx35jA6H9+dKGui3pLIfgirju9w=
+dYlGOIrOj9VLPUz0AXe+p6jtavB72uM1sDKYb4axrJnD4CNHLaZPxcXWTUWs=3D" style=3D"t=
+ext-decoration:none">
+<span style=3D"font-size:11px">Unsubscribe</span>
+</a>
+</p>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height=3D"0"><td>&n=
+bsp;</td></tr> <![endif]--></tbody>
+</table>
+</div>
+</div><!--[if gte mso 9]> </th></tr></table><p style=3D"height:0px; margin-=
+bottom:0; margin-top:0; padding:0;line-height: 0px; mso-line-height-rule: e=
+xactly; background-color: transparent;"></p> <![endif]--><a href=3D"https:/=
+/aus01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F5a3318f6fcc34e=
+41bf99d46845944055.svc.dynamics.com%2Ft%2Ft%2FUFebhextTntga3pP7HJSxxxxmZVPS=
+9jU8LUR6igL3ZMx%2F7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx&amp;data=3D0=
+5%7C02%7C%7Cf88cca47681f411b802808dc573abd3d%7C84df9e7fe9f640afb435aaaaaaaa=
+aaaa%7C1%7C0%7C638481157026152726%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwM=
+DAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&amp;sdata=3D=
+ZF5qhvW5TvclseNMcEBxXVdH4dS2GOuE6ai4a3rcjbE%3D&amp;reserved=3D0" originalsr=
+c=3D"https://5a3318f6fcc34e41bf99d46845944055.svc.dynamics.com/t/t/UFebhext=
+Tntga3pP7HJSxxxxmZVPS9jU8LUR6igL3ZMx/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAo=
+WGDUAx" shash=3D"qtIxJhen8GXNqnJbkiq+h2XjQ1Oo96SjA9700zlajU3aQ+bJjA8g2dHnan=
+kEQrzvOyAmSZY7G2BFKQNmKv/ZYHSs2glaPzaxPGYQ9ZAvlx2wQtZNxCoU3LDEUJMgcyvtVBP46=
+igu5QETgezdafqjsOMRd6TsUYGpFHJTj6Na1Uk=3D"></a><img src=3D"https://5a3318f6=
+fcc34e41bf99d46845944055.svc.dynamics.com/t/i/aaQyDXOOxNslUhFuWjher6J24A0KE=
+RaMJ0RDOTtk6J4x/7GlCRUix9lmnliZ0R6m85vZSoKplRUQixFgJAoWGDUAx" width=3D"0" h=
+eight=3D"0"></body></html>=
+
+--=-fegdVeEyb7K9/dGa3XgI1Q==--
